@@ -39,8 +39,8 @@ export function Navbar() {
 									href={link.href}
 									className={`text-sm font-medium transition-colors ${
 										isActive
-											? "text-[#8B0000]"
-											: "text-[#0a0a0a] hover:text-[#8B0000]"
+											? "text-[color:var(--color-brand)]"
+											: "text-[color:var(--color-primary-text)] hover:text-[color:var(--color-brand)]"
 									}`}
 								>
 									{link.name}
