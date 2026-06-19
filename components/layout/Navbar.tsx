@@ -97,8 +97,8 @@ export function Navbar() {
 									onClick={() => setIsOpen(false)}
 									className={`block px-3 py-2 text-base font-medium rounded-md ${
 										isActive
-											? "text-[#8B0000] bg-[#8B0000]/5"
-											: "text-[#0a0a0a]"
+											? "text-[color:var(--color-brand)] bg-[#8B0000]/5"
+											: "text-[color:var(--color-primary-text)]"
 									}`}
 								>
 									{link.name}
