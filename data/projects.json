@@ -1,0 +1,53 @@
+[
+	{
+		"slug": "project-alpha",
+		"title": "Project Alpha",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+		"tags": ["Cloud"],
+		"techStack": [
+			"Next.js",
+			"React",
+			"TypeScript",
+			"Tailwind CSS",
+			"Git",
+			"AWS"
+		],
+		"githubUrl": "https://github.com/yourusername/project-alpha",
+		"liveDemoUrl": "https://project-alpha.vercel.app",
+		"featured": true,
+		"category": "Cloud"
+	},
+	{
+		"slug": "mini-s3",
+		"title": "Mini S3",
+		"description": "A lightweight object storage service built to mimic core AWS S3 functionality.",
+		"tags": ["Cloud"],
+		"techStack": ["Next.js", "TypeScript", "AWS"],
+		"githubUrl": "https://github.com/yourusername/mini-s3",
+		"liveDemoUrl": "",
+		"featured": true,
+		"category": "Cloud"
+	},
+	{
+		"slug": "hazard-zone",
+		"title": "Hazard Zone",
+		"description": "A web app that visualizes hazard zones using geolocation and mapping APIs.",
+		"tags": ["Web"],
+		"techStack": ["React", "TypeScript", "Tailwind CSS"],
+		"githubUrl": "https://github.com/yourusername/hazard-zone",
+		"liveDemoUrl": "",
+		"featured": true,
+		"category": "Web"
+	},
+	{
+		"slug": "event-notification",
+		"title": "Event Notification System",
+		"description": "A REST API service that sends real-time event notifications via webhook integration.",
+		"tags": ["REST API"],
+		"techStack": ["Next.js", "TypeScript"],
+		"githubUrl": "https://github.com/yourusername/event-notification",
+		"liveDemoUrl": "",
+		"featured": false,
+		"category": "REST API"
+	}
+]
