@@ -7,32 +7,40 @@
 	--color-primary-text: #0a0a0a;
 	--color-muted: #6b7280;
 	--color-border-light: #e5e7eb;
-	--color-grid-dot: #f0f0f0;
+	--color-grid-dot: #c4c4c4;
 
 	--font-sans: "Inter", system-ui, sans-serif;
 }
 
-@layer base {
-	body {
-		background-color: var(--color-surface);
-		color: var(--color-primary-text);
-		font-family: var(--font-sans);
-		/* 1px dot pattern with 24px spacing as per specifications */
-		background-image: radial-gradient(
-			var(--color-grid-dot) 1px,
-			transparent 1px
-		);
-		background-size: 24px 24px;
-		background-attachment: fixed;
-	}
+body {
+	background-color: transparent;
+	color: var(--color-primary-text);
+	font-family: var(--font-sans);
 }
 
-/* Subtle premium hover effect for modern SaaS style card components */
+html {
+	background-color: var(--color-surface);
+}
+
+.dot-grid-bg {
+	position: fixed;
+	inset: 0;
+	z-index: 0;
+	background-image: radial-gradient(
+		var(--color-grid-dot) 1.5px,
+		transparent 1.5px
+	);
+	background-size: 24px 24px;
+	pointer-events: none;
+}
+
+/* Premium hover effect handled cleanly outside the @theme engine */
 .saas-card-hover {
 	transition:
-		border-color 0.2s ease,
-		box-shadow 0.2s ease;
+		border-color 200ms ease,
+		box-shadow 200ms ease;
 }
+
 .saas-card-hover:hover {
 	border-color: var(--color-brand);
 }
