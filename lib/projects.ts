@@ -8,7 +8,7 @@ export async function getProjects(): Promise<Project[]> {
 }
 
 export async function getFeaturedProjects(): Promise<Project[]> {
-	return projects.filter((p) => p.featured).slice(0, 3);
+	return projects.filter((p) => p.featured).slice(0, 2);
 }
 
 export async function getProjectBySlug(
