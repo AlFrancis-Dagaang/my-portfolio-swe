@@ -1,26 +1,38 @@
 @import "tailwindcss";
 
-:root {
-	--background: #ffffff;
-	--foreground: #171717;
+@theme {
+	--color-brand: #8b0000;
+	--color-brand-dark: #660000;
+	--color-surface: #ffffff;
+	--color-primary-text: #0a0a0a;
+	--color-muted: #6b7280;
+	--color-border-light: #e5e7eb;
+	--color-grid-dot: #f0f0f0;
+
+	--font-sans: "Inter", system-ui, sans-serif;
 }
 
-@theme inline {
-	--color-background: var(--background);
-	--color-foreground: var(--foreground);
-	--font-sans: var(--font-geist-sans);
-	--font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-	:root {
-		--background: #0a0a0a;
-		--foreground: #ededed;
+@layer base {
+	body {
+		background-color: var(--color-surface);
+		color: var(--color-primary-text);
+		font-family: var(--font-sans);
+		/* 1px dot pattern with 24px spacing as per specifications */
+		background-image: radial-gradient(
+			var(--color-grid-dot) 1px,
+			transparent 1px
+		);
+		background-size: 24px 24px;
+		background-attachment: fixed;
 	}
 }
 
-body {
-	background: var(--background);
-	color: var(--foreground);
-	font-family: Arial, Helvetica, sans-serif;
+/* Subtle premium hover effect for modern SaaS style card components */
+.saas-card-hover {
+	transition:
+		border-color 0.2s ease,
+		box-shadow 0.2s ease;
+}
+.saas-card-hover:hover {
+	border-color: var(--color-brand);
 }
