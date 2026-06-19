@@ -55,6 +55,7 @@ export function Navbar() {
 						onClick={() => setIsOpen(!isOpen)}
 						className="flex h-9 w-9 items-center justify-center rounded-md md:hidden text-[#0a0a0a]"
 						aria-label="Toggle Navigation Menu"
+						aria-expanded={isOpen}
 					>
 						<svg
 							className="h-6 w-6"
