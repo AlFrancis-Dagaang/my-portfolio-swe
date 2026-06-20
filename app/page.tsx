@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
+import { ContactCTA } from "@/components/sections/ContactCTA";
+import { FeaturedProjects } from "@/components/sections/FeaturedProjects";
 import Hero from "@/components/sections/Hero";
 import { TechStack } from "@/components/sections/TechStack";
-import { FeaturedProjects } from "@/components/sections/FeaturedProjects";
-import { ContactCTA } from "@/components/sections/ContactCTA";
 import { getFeaturedProjects } from "@/lib/projects";
 
 export const metadata: Metadata = {

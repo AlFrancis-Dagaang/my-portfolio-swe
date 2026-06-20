@@ -21,7 +21,11 @@ export function Navbar() {
 			<Container>
 				<div className="flex h-16 items-center justify-between">
 					{/* Coded SVG/CSS "AF" Logo */}
-					<Link href="/" aria-label="Home" className="flex items-center gap-2 group">
+					<Link
+						href="/"
+						aria-label="Home"
+						className="flex items-center gap-2 group"
+					>
 						<div className="flex h-9 w-9 items-center justify-center rounded-full border-2 border-[#8B0000] bg-white transition-colors group-hover:bg-[#8B0000]/5">
 							<span className="font-sans font-black text-xs tracking-tighter text-[#8B0000]">
 								AF
