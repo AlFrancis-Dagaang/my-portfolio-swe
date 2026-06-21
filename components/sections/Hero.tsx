@@ -4,12 +4,14 @@ import { Container } from "../layout/Container";
 
 export default function Hero() {
 	return (
-		<section className="relative pt-12 pb-16 md:pt-24 md:pb-28 overflow-hidden bg-transparent">
+		<section className="relative pt-12 pb-16 md:pt-24 md:pb-28 overflow-hidden bg-transparent max-w-full">
 			<Container className="relative">
+				{/* Utilizing a 12-column grid layout for precise alignment */}
 				<div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-8 items-center">
-					{/* Left Column: Higher z-index allows text to overlay slightly on the image */}
+					{/* Left Column: Text content (Spans 8 columns on large screens) */}
+					{/* z-10 ensures your typography stays cleanly layered on top of the image */}
 					<div className="flex flex-col space-y-6 lg:col-span-8 z-10 select-text">
-						{/* Huge SaaS Headline matching your tight letter spacing layout */}
+						{/* Huge SaaS Headline */}
 						<h1 className="text-[52px] sm:text-7xl md:text-[84px] lg:text-[92px] font-black tracking-tighter uppercase text-[#0a0a0a] leading-[0.88] font-sans">
 							AL FRANCIS <br />
 							<span className="text-[#8b0000]">DAGAANG</span>
@@ -20,14 +22,17 @@ export default function Hero() {
 							Hi, I&apos;m a Software Engineer and Cloud Enthusiast.
 						</p>
 
-						{/* Cleaned up About Preview Paragraph */}
-						<p className="text-base font-normal text-[#6b7280] leading-relaxed max-w-xl font-sans">
+						{/* 
+                          CRITICAL FIX: Changed max-w-xl to max-w-md (or max-w-[460px]).
+                          This prevents the paragraph from stretching into the right side, 
+                          keeping it perfectly readable and clear of the photo.
+                        */}
+						<p className="text-base font-normal text-[#6b7280] leading-relaxed max-w-md font-sans">
 							Building highly scalable serverless architectures, robust REST
 							APIs, and modern frontends with clean TypeScript. Focused on
 							performance and optimized cloud infrastructure.
 						</p>
 
-						{/* Minimal Crimson Link */}
 						<div className="pt-2">
 							<Link
 								href="/about"
@@ -41,18 +46,18 @@ export default function Hero() {
 						</div>
 					</div>
 
-					{/* Right Column: Negative margin pulls it left underneath the typography */}
-					<div className="lg:col-span-4 relative w-full flex justify-center lg:justify-end mt-4 lg:mt-0">
-						{/* - lg:scale-130 expands your photo comfortably past the container boundaries
-                          - lg:-ml-32 pulls the left edge of your photo box deep under the text container 
-                          - z-0 ensures your image stays naturally layered behind the bold headers
+					{/* Right Column: Image Wrapper (Spans 4 columns on large screens) */}
+					<div className="lg:col-span-4 relative w-full max-w-full overflow-visible flex justify-center lg:justify-end mt-4 lg:mt-0">
+						{/* 
+                          - lg:-ml-36 pulls the image left so it fits right next to/under the headline text.
+                          - z-0 keeps it structurally backgrounded relative to your copy.
                         */}
-						<div className="relative w-full max-w-[360px] sm:max-w-[420px] lg:max-w-[540px] lg:scale-130 lg:-ml-32 lg:-mr-16 z-0">
+						<div className="relative w-full max-w-[360px] sm:max-w-[420px] lg:max-w-[480px] lg:scale-115 lg:origin-left-bottom lg:-ml-45 z-0">
 							<Image
 								src="/images/profile/profile-v2.png"
 								alt="Al Francis Dagaang Profile Photo"
-								width={700}
-								height={700}
+								width={500}
+								height={500}
 								priority
 								style={{ width: "100%", height: "auto" }}
 								className="object-contain select-none pointer-events-none mix-blend-normal"
