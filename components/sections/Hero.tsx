@@ -12,13 +12,13 @@ export default function Hero() {
 					{/* z-10 ensures your typography stays cleanly layered on top of the image */}
 					<div className="flex flex-col space-y-6 lg:col-span-8 z-10 select-text">
 						{/* Huge SaaS Headline */}
-						<h1 className="text-[52px] sm:text-7xl md:text-[84px] lg:text-[92px] font-black tracking-tighter uppercase text-[#0a0a0a] leading-[0.88] font-sans">
+						<h1 className="text-[52px] sm:text-7xl md:text-[84px] lg:text-[92px] font-black tracking-tighter uppercase text-primary-text leading-[0.88] font-sans">
 							AL FRANCIS <br />
-							<span className="text-[#8b0000]">DAGAANG</span>
+							<span className="text-brand">DAGA-ANG</span>
 						</h1>
 
 						{/* Subtitle / Tagline */}
-						<p className="text-xl md:text-2xl font-bold text-[#0a0a0a] tracking-tight font-sans pt-2">
+						<p className="text-xl md:text-2xl font-bold text-primary-text tracking-tight font-sans pt-2">
 							Hi, I&apos;m a Software Engineer and Cloud Enthusiast.
 						</p>
 
@@ -27,7 +27,7 @@ export default function Hero() {
                           This prevents the paragraph from stretching into the right side, 
                           keeping it perfectly readable and clear of the photo.
                         */}
-						<p className="text-base font-normal text-[#6b7280] leading-relaxed max-w-md font-sans">
+						<p className="text-base font-normal text-muted leading-relaxed max-w-md font-sans">
 							Building highly scalable serverless architectures, robust REST
 							APIs, and modern frontends with clean TypeScript. Focused on
 							performance and optimized cloud infrastructure.
@@ -36,7 +36,7 @@ export default function Hero() {
 						<div className="pt-2">
 							<Link
 								href="/about"
-								className="text-[#8b0000] hover:text-[#660000] font-bold text-base transition-colors inline-flex items-center gap-1 group font-sans"
+								className="text-brand hover:text-brand-dark font-bold text-base transition-colors inline-flex items-center gap-1 group font-sans"
 							>
 								Learn more
 								<span className="transform transition-transform duration-200 group-hover:translate-x-1">
@@ -52,7 +52,7 @@ export default function Hero() {
                           - lg:-ml-36 pulls the image left so it fits right next to/under the headline text.
                           - z-0 keeps it structurally backgrounded relative to your copy.
                         */}
-						<div className="relative w-full max-w-[360px] sm:max-w-[420px] lg:max-w-[480px] lg:scale-115 lg:origin-left-bottom lg:-ml-45 z-0">
+						<div className="relative w-full max-w-90 sm:max-w-105 lg:max-w-120 lg:scale-115 lg:origin-left-bottom lg:-ml-45 z-0">
 							<Image
 								src="/images/profile/profile-v2.png"
 								alt="Al Francis Dagaang Profile Photo"

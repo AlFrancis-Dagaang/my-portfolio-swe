@@ -34,9 +34,9 @@ const marqueeSkills = [
 
 export function TechStack() {
 	return (
-		<section className="py-12 border-t border-[#e5e7eb] bg-white/40 backdrop-blur-md overflow-hidden">
+		<section className="py-12 border-t border-border-light bg-white/40 backdrop-blur-md overflow-hidden">
 			<Container>
-				<h2 className="text-sm font-bold tracking-widest uppercase text-[#0a0a0a] mb-6 font-sans">
+				<h2 className="text-sm font-bold tracking-widest uppercase text-primary-text mb-6 font-sans">
 					Tech Stack
 				</h2>
 

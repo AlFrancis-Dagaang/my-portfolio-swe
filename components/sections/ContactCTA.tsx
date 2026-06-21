@@ -3,10 +3,10 @@ import { Container } from "@/components/layout/Container";
 
 export function ContactCTA() {
 	return (
-		<section className="py-20 border-t border-[#e5e7eb] bg-white/40 backdrop-blur-md">
+		<section className="py-20 border-t border-border-light bg-white/40 backdrop-blur-md">
 			<Container>
 				<div className="flex flex-col items-center justify-center text-center space-y-6 max-w-2xl mx-auto">
-					<h2 className="text-4xl md:text-5xl font-bold uppercase text-[#0a0a0a] font-sans tracking-tight">
+					<h2 className="text-4xl md:text-5xl font-bold uppercase text-primary-text font-sans tracking-tight">
 						Let&apos;s work together
 					</h2>
 					<Link

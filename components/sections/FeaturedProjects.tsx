@@ -9,17 +9,21 @@ interface FeaturedProjectsProps {
 
 export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
 	return (
-		<section className="py-16 border-t border-[#e5e7eb] bg-transparent">
+		<section className="py-16 border-t border-border-light bg-transparent">
 			<Container>
 				<div className="flex items-baseline justify-between mb-10">
-					<h2 className="text-[32px] font-bold uppercase text-[#0a0a0a] font-sans">
+					<h2 className="text-[32px] font-bold uppercase text-primary-text font-sans">
 						Featured Projects
 					</h2>
+
 					<Link
 						href="/projects"
-						className="text-brand font-medium text-base hover:underline inline-flex items-center gap-1 font-sans"
+						className="text-brand hover:text-brand-dark font-bold text-base transition-colors inline-flex items-center gap-1 group font-sans"
 					>
-						View all projects →
+						View all projects
+						<span className="transform transition-transform duration-200 group-hover:translate-x-1">
+							→
+						</span>
 					</Link>
 				</div>
 
