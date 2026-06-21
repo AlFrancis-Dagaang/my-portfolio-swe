@@ -20,7 +20,7 @@ export default function RootLayout({
 				<div className="dot-grid-bg" aria-hidden="true" />
 				<div className="relative z-10 flex flex-col min-h-screen">
 					<Navbar />
-					<main className="flex-grow w-full">{children}</main>
+					<main className="grow w-full">{children}</main>
 					<Footer />
 				</div>
 			</body>

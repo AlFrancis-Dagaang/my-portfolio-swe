@@ -5,6 +5,9 @@ import { Container } from "../layout/Container";
 export default function Hero() {
 	return (
 		<section className="relative pt-12 pb-16 md:pt-24 md:pb-28 overflow-hidden bg-transparent max-w-full">
+			<div className="absolute inset-0 -z-10 overflow-hidden">
+				<div className="absolute top-20 left-1/2 -translate-x-1/2 w-125 h-125 rounded-full bg-brand/10 blur-[120px]" />
+			</div>
 			<Container className="relative">
 				{/* Utilizing a 12-column grid layout for precise alignment */}
 				<div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-8 items-center">

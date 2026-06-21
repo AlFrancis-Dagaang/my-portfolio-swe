@@ -10,15 +10,15 @@
 	--color-grid-dot: #c4c4c4;
 
 	/* Animation mapping */
-	--animate-marquee: marquee 30s linear infinite; /* Slightly slowed down since track is longer */
+	--animate-marquee: marquee 25s linear infinite;
 
+	/* Tailwind v4 requires keyframes to be inside @theme */
 	@keyframes marquee {
 		from {
 			transform: translateX(0);
 		}
 		to {
-			/* Changed to -25% since we have 4 copies of the array tracking sequentially */
-			transform: translateX(-25%);
+			transform: translateX(-50%);
 		}
 	}
 
