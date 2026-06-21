@@ -17,7 +17,7 @@ export function Navbar() {
 	];
 
 	return (
-		<nav className="sticky top-0 z-50 w-full border-b border-[#e5e7eb] bg-white/80 backdrop-blur-md">
+		<nav className="sticky top-0 z-50 w-full border-b border-border-light bg-white/80 backdrop-blur-md">
 			<Container>
 				<div className="flex h-16 items-center justify-between">
 					{/* Coded SVG/CSS "AF" Logo */}
@@ -43,8 +43,8 @@ export function Navbar() {
 									href={link.href}
 									className={`text-sm font-medium transition-colors ${
 										isActive
-											? "text-[color:var(--color-brand)]"
-											: "text-[color:var(--color-primary-text)] hover:text-[color:var(--color-brand)]"
+											? "text-brand"
+											: "text-primary-text hover:text-brand"
 									}`}
 								>
 									{link.name}
@@ -57,7 +57,7 @@ export function Navbar() {
 					<button
 						type="button"
 						onClick={() => setIsOpen(!isOpen)}
-						className="flex h-9 w-9 items-center justify-center rounded-md md:hidden text-[#0a0a0a]"
+						className="flex h-9 w-9 items-center justify-center rounded-md md:hidden text-primary-text"
 						aria-label="Toggle Navigation Menu"
 						aria-expanded={isOpen}
 					>
@@ -90,7 +90,7 @@ export function Navbar() {
 
 			{/* Mobile Menu Panel Dropdown */}
 			{isOpen && (
-				<div className="border-b border-[#e5e7eb] bg-white md:hidden">
+				<div className="border-b border-border-light bg-white md:hidden">
 					<div className="space-y-1 px-4 py-3">
 						{navLinks.map((link) => {
 							const isActive = pathname === link.href;
@@ -100,9 +100,7 @@ export function Navbar() {
 									href={link.href}
 									onClick={() => setIsOpen(false)}
 									className={`block px-3 py-2 text-base font-medium rounded-md ${
-										isActive
-											? "text-[color:var(--color-brand)] bg-[#8B0000]/5"
-											: "text-[color:var(--color-primary-text)]"
+										isActive ? "text-brand bg-[#8B0000]/5" : "text-primary-text"
 									}`}
 								>
 									{link.name}
