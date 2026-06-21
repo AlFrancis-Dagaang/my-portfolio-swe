@@ -1,10 +1,10 @@
 [
-	"Java",
-	"Spring Boot",
-	"Next.js",
-	"React",
-	"TypeScript",
-	"Tailwind CSS",
-	"Git",
-	"AWS"
+	{ "name": "Java", "icon": "java" },
+	{ "name": "Spring Boot", "icon": "spring" },
+	{ "name": "Next.js", "icon": "nextjs" },
+	{ "name": "React", "icon": "react" },
+	{ "name": "TypeScript", "icon": "typescript" },
+	{ "name": "Tailwind CSS", "icon": "tailwindcss" },
+	{ "name": "Git", "icon": "git" },
+	{ "name": "AWS", "icon": "aws" }
 ]
