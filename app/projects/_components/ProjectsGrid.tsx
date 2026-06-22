@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import { ProjectCard } from "@/components/project/ProjectCard";
 import type { Project } from "@/types/project";
 
@@ -20,7 +20,20 @@ const CATEGORIES: Category[] = [
 ];
 
 export function ProjectsGrid({ projects }: ProjectsGridProps) {
-	const [activeCategory, setActiveCategory] = useState<Category>("All");
+	const router = useRouter();
+	const searchParams = useSearchParams();
+
+	const categoryParam = searchParams.get("category") as Category | null;
+	const activeCategory: Category =
+		categoryParam && CATEGORIES.includes(categoryParam) ? categoryParam : "All";
+
+	const setActiveCategory = (category: Category) => {
+		if (category === "All") {
+			router.push("/projects");
+		} else {
+			router.push(`/projects?category=${category}`);
+		}
+	};
 
 	const filteredProjects =
 		activeCategory === "All"

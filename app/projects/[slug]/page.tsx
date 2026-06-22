@@ -98,9 +98,65 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 				{/* Project Details Grid */}
 				<div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
 					{/* Main Content */}
-					<div className="lg:col-span-2">
+					<div className="lg:col-span-2 space-y-12">
+						{/* Overview */}
+						{project.overview && (
+							<div>
+								<h2 className="text-xl font-bold uppercase text-primary-text mb-4 font-sans">
+									Overview
+								</h2>
+								<p className="text-base font-normal text-muted leading-relaxed font-sans">
+									{project.overview}
+								</p>
+							</div>
+						)}
+
+						{/* Problem */}
+						{project.problem && (
+							<div>
+								<h2 className="text-xl font-bold uppercase text-primary-text mb-4 font-sans">
+									The Problem
+								</h2>
+								<p className="text-base font-normal text-muted leading-relaxed font-sans">
+									{project.problem}
+								</p>
+							</div>
+						)}
+
+						{/* Solution */}
+						{project.solution && (
+							<div>
+								<h2 className="text-xl font-bold uppercase text-primary-text mb-4 font-sans">
+									The Solution
+								</h2>
+								<p className="text-base font-normal text-muted leading-relaxed font-sans">
+									{project.solution}
+								</p>
+							</div>
+						)}
+
+						{/* Highlights */}
+						{project.highlights && project.highlights.length > 0 && (
+							<div>
+								<h2 className="text-xl font-bold uppercase text-primary-text mb-4 font-sans">
+									Key Highlights
+								</h2>
+								<ul className="space-y-2">
+									{project.highlights.map((item) => (
+										<li
+											key={item}
+											className="flex items-start gap-3 text-base text-muted font-sans"
+										>
+											<span className="text-brand font-bold mt-0.5">→</span>
+											{item}
+										</li>
+									))}
+								</ul>
+							</div>
+						)}
+
 						{/* Tech Stack */}
-						<div className="mb-12">
+						<div>
 							<h2 className="text-xl font-bold uppercase text-primary-text mb-4 font-sans">
 								Tech Stack
 							</h2>
@@ -117,7 +173,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 						</div>
 
 						{/* Tags */}
-						<div className="mb-12">
+						<div>
 							<h2 className="text-xl font-bold uppercase text-primary-text mb-4 font-sans">
 								Tags
 							</h2>
@@ -133,7 +189,6 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 							</div>
 						</div>
 					</div>
-
 					{/* Sidebar */}
 					<div className="lg:col-span-1">
 						{/* Links Card */}

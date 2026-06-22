@@ -2,11 +2,15 @@ export interface Project {
 	slug: string;
 	title: string;
 	description: string;
+	overview?: string;
+	problem?: string;
+	solution?: string;
+	highlights?: string[];
 	tags: string[];
 	techStack: string[];
 	githubUrl: string;
-	liveDemoUrl?: string;
-	imageUrl?: string;
+	imageUrl: string;
+	liveDemoUrl: string;
 	featured: boolean;
-	category: "Web" | "Cloud" | "Data" | "REST API" | "Mobile";
+	category: string;
 }
