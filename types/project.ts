@@ -6,6 +6,7 @@ export interface Project {
 	techStack: string[];
 	githubUrl: string;
 	liveDemoUrl?: string;
+	imageUrl?: string;
 	featured: boolean;
 	category: "Web" | "Cloud" | "Data" | "REST API" | "Mobile";
 }

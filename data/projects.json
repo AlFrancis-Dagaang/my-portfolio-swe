@@ -1,53 +1,32 @@
 [
 	{
-		"slug": "project-alpha",
-		"title": "Project Alpha",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+		"slug": "aws-pipeline",
+		"title": "AWS Data Pipeline",
+		"description": "Automated AWS Data Pipeline for Dengue Outbreak Prediction and containerized workflow built using modern AWS cloud services.",
 		"tags": ["Cloud"],
 		"techStack": [
-			"Next.js",
-			"React",
-			"TypeScript",
-			"Tailwind CSS",
-			"Git",
-			"AWS"
+			"AWS Lambda",
+			"AWS S3",
+			"AWS Step Functions",
+			"Docker",
+			"Python"
 		],
-		"githubUrl": "https://github.com/yourusername/project-alpha",
-		"liveDemoUrl": "https://project-alpha.vercel.app",
-		"featured": true,
-		"category": "Cloud"
-	},
-	{
-		"slug": "mini-s3",
-		"title": "Mini S3",
-		"description": "A lightweight object storage service built to mimic core AWS S3 functionality.",
-		"tags": ["Cloud"],
-		"techStack": ["Next.js", "TypeScript", "AWS"],
-		"githubUrl": "https://github.com/yourusername/mini-s3",
+		"githubUrl": "https://github.com/yourusername/aws-pipeline",
+		"imageUrl": "/images/projects/aws-pipeline.png",
 		"liveDemoUrl": "",
 		"featured": true,
 		"category": "Cloud"
 	},
 	{
-		"slug": "hazard-zone",
-		"title": "Hazard Zone",
-		"description": "A web app that visualizes hazard zones using geolocation and mapping APIs.",
-		"tags": ["Web"],
-		"techStack": ["React", "TypeScript", "Tailwind CSS"],
-		"githubUrl": "https://github.com/yourusername/hazard-zone",
+		"slug": "telco-web",
+		"title": "Telco Web",
+		"description": "Telco churn prediction system using machine learning, deployed as a serverless container on AWS Lambda.",
+		"tags": ["Web", "Cloud"],
+		"techStack": ["Next.js", "TypeScript", "Tailwind CSS"],
+		"githubUrl": "https://github.com/yourusername/telco-web",
+		"imageUrl": "/images/projects/telco-web.png",
 		"liveDemoUrl": "",
 		"featured": true,
 		"category": "Web"
-	},
-	{
-		"slug": "event-notification",
-		"title": "Event Notification System",
-		"description": "A REST API service that sends real-time event notifications via webhook integration.",
-		"tags": ["REST API"],
-		"techStack": ["Next.js", "TypeScript"],
-		"githubUrl": "https://github.com/yourusername/event-notification",
-		"liveDemoUrl": "",
-		"featured": false,
-		"category": "REST API"
 	}
 ]
