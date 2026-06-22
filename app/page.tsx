@@ -6,7 +6,7 @@ import { TechStack } from "@/components/sections/TechStack";
 import { getFeaturedProjects } from "@/lib/projects";
 
 export const metadata: Metadata = {
-	title: "Al Francis Dagaang — Software Engineer",
+	title: "Al Francis Daga-ang — Software Engineer",
 	description:
 		"Portfolio of Al Francis Dagaang, a Software Engineer and Cloud Enthusiast specializing in Next.js, React, and AWS.",
 	openGraph: {
