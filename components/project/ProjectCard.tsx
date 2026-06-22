@@ -36,9 +36,18 @@ export function ProjectCard({ project }: ProjectCardProps) {
 						</svg>
 					</div>
 				)}
-				<span className="text-xs font-mono font-medium uppercase text-gray-500 tracking-wider block mb-1">
-					{project.category}
-				</span>
+				<div className="flex flex-wrap gap-1.5 mb-1">
+					{project.tags.map((tag, i) => (
+						<span key={tag} className="flex items-center gap-1.5">
+							<span className="text-xs font-mono font-medium uppercase text-gray-500 tracking-wider">
+								{tag}
+							</span>
+							{i < project.tags.length - 1 && (
+								<span className="text-gray-300 text-xs">·</span>
+							)}
+						</span>
+					))}
+				</div>
 				<h3 className="text-xl font-bold uppercase text-primary-text mb-2 font-sans">
 					{project.title}
 				</h3>

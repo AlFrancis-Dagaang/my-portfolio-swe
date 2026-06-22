@@ -3,7 +3,7 @@
 		"slug": "aws-pipeline",
 		"title": "AWS Data Pipeline",
 		"description": "Automated AWS Data Pipeline for Dengue Outbreak Prediction and containerized workflow built using modern AWS cloud services.",
-		"tags": ["Cloud"],
+		"tags": ["Cloud", "Data"],
 		"techStack": [
 			"AWS Lambda",
 			"AWS S3",
@@ -11,7 +11,7 @@
 			"Docker",
 			"Python"
 		],
-		"githubUrl": "https://github.com/yourusername/aws-pipeline",
+		"githubUrl": "https://github.com/AlFrancis-Dagaang/aws-data-pipeline",
 		"imageUrl": "/images/projects/aws-pipeline.png",
 		"liveDemoUrl": "",
 		"featured": true,
@@ -23,10 +23,46 @@
 		"description": "Telco churn prediction system using machine learning, deployed as a serverless container on AWS Lambda.",
 		"tags": ["Web", "Cloud"],
 		"techStack": ["Next.js", "TypeScript", "Tailwind CSS"],
-		"githubUrl": "https://github.com/yourusername/telco-web",
+		"githubUrl": "https://github.com/AlFrancis-Dagaang/telecom-churn-prediction",
 		"imageUrl": "/images/projects/telco-web.png",
 		"liveDemoUrl": "",
 		"featured": true,
 		"category": "Web"
+	},
+	{
+		"slug": "barangay-web",
+		"title": "Barangay 496 Web",
+		"description": "A comprehensive municipal website for Barangay 496 providing information about local services, events, and government activities. ",
+		"tags": ["Web"],
+		"techStack": ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL"],
+		"githubUrl": "https://github.com/AlFrancis-Dagaang/Barangay-496-Website.git",
+		"imageUrl": "/images/projects/barangay-web.png",
+		"liveDemoUrl": "",
+		"featured": false,
+		"category": "Web"
+	},
+	{
+		"slug": "nimbus-drop",
+		"title": "NimbusDrop",
+		"description": "REST API file storage system built with Spring Boot that provides secure file upload, download, and management capabilities.",
+		"tags": ["REST API"],
+		"techStack": ["Java", "Spring Boot", "JWT Authentication"],
+		"githubUrl": "https://github.com/AlFrancis-Dagaang/nimbusdrop.git",
+		"imageUrl": "/images/projects/nimbus-drop.png",
+		"liveDemoUrl": "",
+		"featured": false,
+		"category": "REST API"
+	},
+	{
+		"slug": "lapit-app",
+		"title": "Lapit App",
+		"description": "A personal commuter drop-off alert mobile app that notifies you when you are approaching your destination, solving the problem of missing your stop while commuting.",
+		"tags": ["Mobile"],
+		"techStack": ["React Native", "Expo", "Google Maps API"],
+		"githubUrl": "https://github.com/AlFrancis-Dagaang/lapit-app.git",
+		"imageUrl": "/images/projects/lapit-app.jpg",
+		"liveDemoUrl": "",
+		"featured": false,
+		"category": "Mobile"
 	}
 ]
