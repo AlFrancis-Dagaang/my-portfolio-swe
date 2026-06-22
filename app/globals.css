@@ -9,6 +9,19 @@
 	--color-border-light: #e5e7eb;
 	--color-grid-dot: #c4c4c4;
 
+	/* Animation mapping */
+	--animate-marquee: marquee 25s linear infinite;
+
+	/* Tailwind v4 requires keyframes to be inside @theme */
+	@keyframes marquee {
+		from {
+			transform: translateX(0);
+		}
+		to {
+			transform: translateX(-50%);
+		}
+	}
+
 	--font-sans: "Inter", system-ui, sans-serif;
 }
 
@@ -34,7 +47,6 @@ html {
 	pointer-events: none;
 }
 
-/* Premium hover effect handled cleanly outside the @theme engine */
 .saas-card-hover {
 	transition:
 		border-color 200ms ease,

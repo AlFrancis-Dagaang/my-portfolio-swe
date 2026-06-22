@@ -2,7 +2,7 @@ import { Container } from "./Container";
 
 export function Footer() {
 	return (
-		<footer className="w-full border-t border-[#e5e7eb] py-8 bg-white/50 backdrop-blur-sm mt-auto">
+		<footer className="w-full border-t border-border-light py-8 bg-white/50 backdrop-blur-sm mt-auto">
 			<Container>
 				<div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 text-sm text-[#6b7280]">
 					<a
@@ -13,7 +13,7 @@ export function Footer() {
 					>
 						GitHub
 					</a>
-					<span className="hidden sm:inline text-[#e5e7eb]">•</span>
+					<span className="hidden sm:inline text-border-light">•</span>
 					<a
 						href="https://linkedin.com"
 						target="_blank"

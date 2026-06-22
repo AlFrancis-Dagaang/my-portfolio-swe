@@ -17,10 +17,10 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className="min-h-screen flex flex-col antialiased">
-			<div className="dot-grid-bg" aria-hidden="true" />
+				<div className="dot-grid-bg" aria-hidden="true" />
 				<div className="relative z-10 flex flex-col min-h-screen">
 					<Navbar />
-					<main className="flex-grow w-full">{children}</main>
+					<main className="grow w-full">{children}</main>
 					<Footer />
 				</div>
 			</body>
