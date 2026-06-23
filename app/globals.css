@@ -8,7 +8,7 @@
 	--color-muted: #6b7280;
 	--color-border-light: #e5e7eb;
 	--color-grid-dot: #c4c4c4;
-
+	--color-skeleton: #e5e7eb;
 	/* Animation mapping */
 	--animate-marquee: marquee 25s linear infinite;
 
