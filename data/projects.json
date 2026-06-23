@@ -3,7 +3,17 @@
 		"slug": "aws-pipeline",
 		"title": "AWS Data Pipeline",
 		"description": "Automated AWS Data Pipeline for Dengue Outbreak Prediction and containerized workflow built using modern AWS cloud services.",
-		"tags": ["Cloud"],
+		"overview": "A fully automated, serverless data pipeline built on AWS that collects, processes, and analyzes epidemiological data to predict dengue fever outbreaks. The system leverages containerized machine learning models and cloud-native orchestration to deliver timely insights with minimal manual intervention.",
+		"problem": "Dengue outbreak prediction requires processing large volumes of health and environmental data from multiple sources in a timely manner. Doing this manually is slow, error-prone, and difficult to scale — delays in analysis can mean delays in public health response.",
+		"solution": "Built a serverless, event-driven pipeline on AWS where S3 uploads automatically trigger Lambda functions to process incoming data. AWS Step Functions orchestrates the multi-stage workflow — from ingestion and transformation to running a containerized ML prediction model — ensuring each step runs reliably and in the correct order without managing any servers.",
+		"highlights": [
+			"Event-driven architecture: S3 uploads automatically trigger the entire pipeline",
+			"ML model containerized with Docker and deployed on AWS Lambda for scalable inference",
+			"AWS Step Functions orchestrates multi-stage processing with built-in error handling and retries",
+			"Fully serverless — no infrastructure to manage or provision",
+			"Designed for dengue outbreak prediction using real epidemiological data"
+		],
+		"tags": ["Cloud", "Data"],
 		"techStack": [
 			"AWS Lambda",
 			"AWS S3",
@@ -11,7 +21,7 @@
 			"Docker",
 			"Python"
 		],
-		"githubUrl": "https://github.com/yourusername/aws-pipeline",
+		"githubUrl": "https://github.com/AlFrancis-Dagaang/aws-data-pipeline",
 		"imageUrl": "/images/projects/aws-pipeline.png",
 		"liveDemoUrl": "",
 		"featured": true,
@@ -21,12 +31,88 @@
 		"slug": "telco-web",
 		"title": "Telco Web",
 		"description": "Telco churn prediction system using machine learning, deployed as a serverless container on AWS Lambda.",
+		"overview": "A full-stack web application that predicts telecom customer churn using a machine learning model served through a serverless AWS Lambda container. The frontend provides an intuitive interface for inputting customer data and viewing churn risk predictions in real time.",
+		"problem": "Telecom companies lose significant revenue when customers switch providers. Identifying at-risk customers before they churn is critical, but manually analyzing customer behavior data is time-consuming and inconsistent without an automated, accessible system.",
+		"solution": "Built a Next.js web interface that communicates with a containerized ML model deployed on AWS Lambda. Users can input customer attributes and receive an instant churn probability prediction. Deploying the model as a serverless container keeps infrastructure costs low while maintaining scalability.",
+		"highlights": [
+			"ML churn prediction model containerized and deployed on AWS Lambda",
+			"Next.js frontend with TypeScript for type-safe, maintainable code",
+			"Serverless architecture scales automatically with zero idle infrastructure cost",
+			"Clean UI built with Tailwind CSS for fast interaction and result display",
+			"Bridges the gap between data science output and a usable web product"
+		],
 		"tags": ["Web", "Cloud"],
 		"techStack": ["Next.js", "TypeScript", "Tailwind CSS"],
-		"githubUrl": "https://github.com/yourusername/telco-web",
+		"githubUrl": "https://github.com/AlFrancis-Dagaang/telecom-churn-prediction",
 		"imageUrl": "/images/projects/telco-web.png",
 		"liveDemoUrl": "",
 		"featured": true,
 		"category": "Web"
+	},
+	{
+		"slug": "barangay-web",
+		"title": "Barangay 496 Web",
+		"description": "A comprehensive municipal website for Barangay 496 providing information about local services, events, and government activities.",
+		"overview": "A full-stack municipal website built for Barangay 496 that serves as the official digital presence for the local government unit. Residents can access information about local services, upcoming events, announcements, and government activities in one central platform.",
+		"problem": "Many local barangays in the Philippines lack a digital presence, forcing residents to visit in person or rely on word of mouth for information about government services, schedules, and community announcements — creating barriers especially for working residents.",
+		"solution": "Developed a comprehensive web platform using Next.js and PostgreSQL that gives Barangay 496 a professional online hub. The site centralizes all relevant community information, making it easily accessible to residents at any time without requiring a physical visit to the barangay hall.",
+		"highlights": [
+			"Centralized hub for local government services, events, and announcements",
+			"PostgreSQL database for persistent storage of dynamic barangay content",
+			"Built with Next.js for fast page loads and SEO-friendly public pages",
+			"Responsive design with Tailwind CSS for mobile and desktop residents",
+			"Addresses the lack of digital infrastructure in local Philippine government units"
+		],
+		"tags": ["Web"],
+		"techStack": ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL"],
+		"githubUrl": "https://github.com/AlFrancis-Dagaang/Barangay-496-Website.git",
+		"imageUrl": "/images/projects/barangay-web.png",
+		"liveDemoUrl": "",
+		"featured": false,
+		"category": "Web"
+	},
+	{
+		"slug": "nimbus-drop",
+		"title": "NimbusDrop",
+		"description": "REST API file storage system built with Spring Boot that provides secure file upload, download, and management capabilities.",
+		"overview": "NimbusDrop is a secure, backend REST API for file storage and management built with Java and Spring Boot. It provides authenticated endpoints for uploading, downloading, and managing files — serving as a lightweight, self-hostable alternative to cloud storage services.",
+		"problem": "Many projects need a simple, secure way to handle file storage without depending on third-party services like AWS S3 or Google Drive. Building file management from scratch with proper authentication and access control is repetitive and error-prone without a solid foundation.",
+		"solution": "Designed a clean REST API with Spring Boot that handles file upload, download, and management behind JWT-secured endpoints. Each user's files are access-controlled, ensuring only authenticated and authorized requests can interact with stored data — providing a reusable backend that any frontend or service can integrate with.",
+		"highlights": [
+			"JWT authentication secures all file upload, download, and management endpoints",
+			"RESTful API design makes it easily consumable by any frontend or service",
+			"Built with Spring Boot for a production-ready, maintainable Java backend",
+			"Supports secure file upload and download with proper access control",
+			"Lightweight and self-hostable — no dependency on third-party storage providers"
+		],
+		"tags": ["REST API"],
+		"techStack": ["Java", "Spring Boot", "JWT Authentication"],
+		"githubUrl": "https://github.com/AlFrancis-Dagaang/nimbusdrop.git",
+		"imageUrl": "/images/projects/nimbus-drop.png",
+		"liveDemoUrl": "",
+		"featured": false,
+		"category": "REST API"
+	},
+	{
+		"slug": "lapit-app",
+		"title": "Lapit App",
+		"description": "A personal commuter drop-off alert mobile app that notifies you when you are approaching your destination, solving the problem of missing your stop while commuting.",
+		"overview": "Lapit (Filipino for 'approaching') is a mobile app built for daily commuters that sends a proximity alert when you are nearing your destination. Built with React Native and Expo, it runs on both iOS and Android and uses Google Maps to track your real-time location against your set drop-off point.",
+		"problem": "Commuters in the Philippines — especially those on buses and jeepneys — frequently miss their stop because they fall asleep, get distracted, or are unfamiliar with the route. There is no native alert system in public transport that notifies passengers when they are close to their destination.",
+		"solution": "Built a mobile app where users set their drop-off destination on a map before their trip. The app monitors the user's GPS location in the background and triggers a notification alert when they enter a defined radius around their destination — giving them enough time to prepare to get off.",
+		"highlights": [
+			"Real-time GPS tracking using Google Maps API to monitor commuter location",
+			"Proximity-based push notification fires when approaching the set destination",
+			"Cross-platform — runs on both iOS and Android via React Native and Expo",
+			"Simple destination-setting flow designed for quick use before boarding",
+			"Solves a real, everyday problem for Filipino commuters on public transport"
+		],
+		"tags": ["Mobile"],
+		"techStack": ["React Native", "Expo", "Google Maps API"],
+		"githubUrl": "https://github.com/AlFrancis-Dagaang/lapit-app.git",
+		"imageUrl": "/images/projects/lapit-app.jpg",
+		"liveDemoUrl": "",
+		"featured": false,
+		"category": "Mobile"
 	}
 ]
