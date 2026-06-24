@@ -1,5 +1,5 @@
-import { Container } from "./Container";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { Container } from "./Container";
 
 export function Footer() {
 	return (
