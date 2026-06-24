@@ -24,9 +24,9 @@ export function Certifications({
 
 function CertCard({ cert }: { cert: Certification }) {
 	return (
-		<div className="group flex gap-4 p-5 rounded-2xl border border-border-light bg-surface hover:border-brand/40 transition-colors duration-200">
+		<div className="group flex gap-4 p-5 rounded-2xl border border-border-light bg-white/80 hover:border-brand/40 transition-colors duration-200">
 			{cert.badgeImage && (
-				<div className="shrink-0 w-14 h-14 rounded-xl overflow-hidden border border-border-light bg-surface flex items-center justify-center">
+				<div className="shrink-0 w-14 h-14 rounded-xl overflow-hidden border border-border-light bg-white/80 flex items-center justify-center">
 					<Image
 						src={cert.badgeImage}
 						alt={cert.title}

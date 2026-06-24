@@ -1,10 +1,10 @@
 export function Timeline({ children }: { children: React.ReactNode }) {
 	return (
-		<div className="relative">
+		<div className="relative z-10">
 			{/* Rail — hidden on mobile, shown md+ */}
-			<div className="hidden md:block absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-border-light" />
+			<div className="hidden md:block absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-0.5 bg-gray-300/80" />
 			{/* Left rail for mobile */}
-			<div className="block md:hidden absolute left-1.5 top-0 bottom-0 w-px bg-border-light" />
+			<div className="block md:hidden absolute left-1.5 top-0 bottom-0 w-0.5 bg-gray-300/80" />
 			<div className="space-y-8 md:space-y-12">{children}</div>
 		</div>
 	);
@@ -37,7 +37,7 @@ export function TimelineItem({
 						"absolute left-0 top-1.5 w-3.5 h-3.5 rounded-full border-2 transition-colors z-10",
 						active
 							? "border-brand bg-brand/20"
-							: "border-border-light bg-surface",
+							: "border-border-light bg-white/80",
 					].join(" ")}
 				/>
 				<TimelineCard
@@ -76,7 +76,7 @@ export function TimelineItem({
 						"absolute left-1/2 -translate-x-1/2 top-2 w-3.5 h-3.5 rounded-full border-2 transition-colors z-10",
 						active
 							? "border-brand bg-brand/20"
-							: "border-border-light bg-surface",
+							: "border-border-light bg-white/80",
 					].join(" ")}
 				/>
 
@@ -120,7 +120,7 @@ function TimelineCard({
 	return (
 		<div
 			className={[
-				"w-full p-5 rounded-2xl border bg-surface transition-colors duration-200",
+				"w-full p-5 rounded-2xl border bg-white/80 transition-colors duration-200",
 				active ? "border-brand/40" : "border-border-light",
 			].join(" ")}
 		>

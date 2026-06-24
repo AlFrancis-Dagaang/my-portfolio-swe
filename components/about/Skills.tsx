@@ -41,7 +41,7 @@ function SkillPill({ skill }: { skill: Skill }) {
 			style={{
 				clipPath: "polygon(8% 0%, 92% 0%, 100% 50%, 92% 100%, 8% 100%, 0% 50%)",
 			}}
-			className="flex items-center gap-1.5 md:gap-2.5 px-4 md:px-6 py-2 md:py-2.5 border border-border-light bg-surface hover:border-brand/40 transition-colors duration-200"
+			className="flex items-center gap-1.5 md:gap-2.5 px-4 md:px-6 py-2 md:py-2.5 border border-border-light bg-white/80 hover:border-brand/40 transition-colors duration-200"
 		>
 			{Icon && (
 				<Icon
