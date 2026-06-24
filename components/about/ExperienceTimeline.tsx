@@ -1,6 +1,6 @@
 import type { Experience } from "@/types/experience";
-import { Timeline, TimelineItem } from "./Timeline";
 import { SectionEyebrow } from "./SectionEyebrow";
+import { Timeline, TimelineItem } from "./Timeline";
 
 export function ExperienceTimeline({
 	experiences,

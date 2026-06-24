@@ -1,5 +1,5 @@
-import { SectionEyebrow } from "./SectionEyebrow";
 import type { Education } from "@/types/education";
+import { SectionEyebrow } from "./SectionEyebrow";
 import { Timeline, TimelineItem } from "./Timeline";
 
 export function EducationTimeline({ educations }: { educations: Education[] }) {
