@@ -2,6 +2,7 @@ export interface Certification {
 	id: string;
 	title: string;
 	issuer: string;
-	year: number;
+	issuedDate: string;
+	description: string;
 	badgeImage: string;
 }

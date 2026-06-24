@@ -3,7 +3,16 @@
 		"id": "aws-cloud-practitioner",
 		"title": "AWS Certified Cloud Practitioner",
 		"issuer": "Amazon Web Services",
-		"year": 2025,
+		"issuedDate": "2025-06-21",
+		"description": "Earners of this certification have a fundamental understanding of IT services and their uses in the AWS Cloud. They demonstrated cloud fluency and foundational AWS knowledge. Badge owners are able to identify essential AWS services necessary to set up AWS-focused projects.",
 		"badgeImage": "/images/certifications/aws-cloud-practitioner.png"
+	},
+	{
+		"id": "education-gen-ai",
+		"title": "AWS Educate Introduction to Generative AI",
+		"issuer": "Amazon Web Services",
+		"issuedDate": "2025-04-04",
+		"description": "Earners of this certification have the skills to deploy applications, monitor operations, and manage enterprise solutions on AWS. They demonstrated proficiency in using AWS Console and the command-line interface to perform common platform-based tasks.",
+		"badgeImage": "/images/certifications/educate-gen-ai.png"
 	}
 ]

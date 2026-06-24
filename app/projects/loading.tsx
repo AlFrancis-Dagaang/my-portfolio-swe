@@ -7,23 +7,23 @@ function SkeletonCard() {
 			<div className="w-full h-40 bg-surface border border-border-light mb-5 rounded" />
 
 			{/* Category placeholder */}
-			<div className="h-3 w-12 bg-gray-200 rounded mb-2" />
+			<div className="h-3 w-12 bg-skeleton rounded mb-2" />
 
 			{/* Title placeholder */}
 			<div className="space-y-2 mb-4">
-				<div className="h-5 bg-gray-200 rounded w-3/4" />
-				<div className="h-5 bg-gray-200 rounded w-2/3" />
+				<div className="h-5 bg-skeleton rounded w-3/4" />
+				<div className="h-5 bg-skeleton rounded w-2/3" />
 			</div>
 
 			{/* Description placeholder */}
 			<div className="space-y-2 mb-6">
-				<div className="h-3 bg-gray-200 rounded" />
-				<div className="h-3 bg-gray-200 rounded" />
-				<div className="h-3 bg-gray-200 rounded w-4/5" />
+				<div className="h-3 bg-skeleton rounded" />
+				<div className="h-3 bg-skeleton rounded" />
+				<div className="h-3 bg-skeleton rounded w-4/5" />
 			</div>
 
 			{/* Link placeholder */}
-			<div className="h-4 w-20 bg-gray-200 rounded" />
+			<div className="h-4 w-20 bg-skeleton rounded" />
 		</div>
 	);
 }
@@ -34,20 +34,20 @@ export default function ProjectsLoading() {
 			<Container>
 				{/* Header Skeleton */}
 				<div className="mb-12">
-					<div className="h-16 md:h-20 bg-gray-200 rounded w-2/3 mb-3 animate-pulse" />
+					<div className="h-16 md:h-20 bg-skeleton rounded w-2/3 mb-3 animate-pulse" />
 					<div className="space-y-2">
-						<div className="h-4 bg-gray-200 rounded w-full animate-pulse" />
-						<div className="h-4 bg-gray-200 rounded w-4/5 animate-pulse" />
+						<div className="h-4 bg-skeleton rounded w-full animate-pulse" />
+						<div className="h-4 bg-skeleton rounded w-4/5 animate-pulse" />
 					</div>
 				</div>
 
-				{/* Filter Tabs Skeleton */}
-				<div className="mb-12 flex flex-wrap gap-2 sm:gap-3">
-					{[...Array(6)].map((_, i) => (
+				{/* Filter Tabs Skeleton — pill-shaped, centered */}
+				<div className="mb-12 flex flex-wrap justify-center gap-2 sm:gap-3">
+					{["w-12", "w-14", "w-16", "w-14", "w-20", "w-20"].map((w, i) => (
 						<div
 							// biome-ignore lint/suspicious/noArrayIndexKey: static skeleton array, no reordering
 							key={i}
-							className="h-10 w-20 bg-gray-200 rounded border border-border-light animate-pulse"
+							className={`h-9 sm:h-10 bg-skeleton rounded-full border border-border-light animate-pulse ${w} sm:${w}`}
 						/>
 					))}
 				</div>
@@ -62,7 +62,7 @@ export default function ProjectsLoading() {
 
 				{/* Stats Skeleton */}
 				<div className="mt-12 pt-8 border-t border-border-light">
-					<div className="h-4 w-40 bg-gray-200 rounded animate-pulse" />
+					<div className="h-4 w-40 bg-skeleton rounded animate-pulse" />
 				</div>
 			</Container>
 		</section>

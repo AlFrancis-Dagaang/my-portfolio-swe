@@ -1,12 +1,29 @@
 [
 	{
-		"degree": "BS Computer Science",
+		"degree": "BS Computer Engineering",
 		"school": "Pamantasan ng Lungsod ng Maynila",
-		"startYear": 2021,
-		"endYear": 2025,
+		"startYear": 2022,
+		"endYear": 2026,
 		"details": [
-			"Relevant coursework: Data Structures, Algorithms, Cloud Computing",
-			"Member of the Computer Science Society"
+			"Relevant coursework: Data Structures, Algorithms, Cloud Computing"
+		]
+	},
+	{
+		"degree": "Senior High School",
+		"school": "Technological University of the Philippines",
+		"startYear": 2019,
+		"endYear": 2020,
+		"details": [
+			"Relevant coursework: Advanced Mathematics, Physics, Computer Programming"
+		]
+	},
+	{
+		"degree": "Junior High School",
+		"school": "Ramon Magsaysay High School",
+		"startYear": 2016,
+		"endYear": 2019,
+		"details": [
+			"General education with foundational courses in science and mathematics"
 		]
 	}
 ]

@@ -9,8 +9,7 @@ import {
 	SiTypescript,
 } from "react-icons/si";
 import { Container } from "@/components/layout/Container";
-import skills from "@/data/skills.json";
-import type { Skill } from "@/types/skill";
+import { getSkills } from "@/lib/about";
 
 const ICON_MAP: Record<string, IconType> = {
 	java: FaJava,
@@ -23,16 +22,15 @@ const ICON_MAP: Record<string, IconType> = {
 	aws: FaAws,
 };
 
-const skillList = skills as Skill[];
+export async function TechStack() {
+	const skillList = await getSkills();
 
-const marqueeSkills = [
-	...skillList.map((skill) => ({ ...skill, instanceId: `${skill.name}-a` })),
-	...skillList.map((skill) => ({ ...skill, instanceId: `${skill.name}-b` })),
-	...skillList.map((skill) => ({ ...skill, instanceId: `${skill.name}-c` })),
-	...skillList.map((skill) => ({ ...skill, instanceId: `${skill.name}-d` })),
-];
-
-export function TechStack() {
+	const marqueeSkills = [
+		...skillList.map((skill) => ({ ...skill, instanceId: `${skill.name}-a` })),
+		...skillList.map((skill) => ({ ...skill, instanceId: `${skill.name}-b` })),
+		...skillList.map((skill) => ({ ...skill, instanceId: `${skill.name}-c` })),
+		...skillList.map((skill) => ({ ...skill, instanceId: `${skill.name}-d` })),
+	];
 	return (
 		<section className="py-12 border-t border-border-light bg-white/40 backdrop-blur-md overflow-hidden">
 			<Container>
