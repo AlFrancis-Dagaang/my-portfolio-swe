@@ -8,7 +8,7 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project }: ProjectCardProps) {
 	return (
-		<div className="bg-white border border-border-light p-6 flex flex-col justify-between h-full shadow-sm">
+		<div className="bg-white/80 border border-border-light p-6 flex flex-col justify-between h-full shadow-sm">
 			<div>
 				{project.imageUrl ? (
 					<Image

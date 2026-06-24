@@ -43,16 +43,16 @@ export function ProjectsGrid({ projects }: ProjectsGridProps) {
 	return (
 		<div>
 			{/* Filter Tabs */}
-			<div className="mb-12 flex flex-wrap gap-2 sm:gap-3">
+			<div className="mb-12 flex flex-wrap justify-center gap-2 sm:gap-3">
 				{CATEGORIES.map((category) => (
 					<button
 						type="button"
 						key={category}
 						onClick={() => setActiveCategory(category)}
-						className={`px-4 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-bold uppercase tracking-wider transition-all duration-200 border font-sans ${
+						className={`px-4 sm:px-5 py-1 sm:py-2.5 text-xs sm:text-sm font-bold uppercase tracking-wider rounded-full transition-all duration-200 border font-sans ${
 							activeCategory === category
 								? "bg-brand text-white border-brand"
-								: "bg-transparent text-primary-text border-border-light hover:border-brand hover:text-brand"
+								: "bg-surface text-primary-text border-border-light hover:border-brand hover:text-brand"
 						}`}
 					>
 						{category}

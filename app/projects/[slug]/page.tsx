@@ -63,16 +63,6 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
 				{/* Project Header */}
 				<div className="mb-12">
-					<div className="flex flex-wrap gap-2 mb-4">
-						{project.tags.map((tag) => (
-							<span
-								key={tag}
-								className="text-xs font-mono font-medium uppercase text-gray-500 tracking-wider px-3 py-1 border border-border-light"
-							>
-								{tag}
-							</span>
-						))}
-					</div>
 					<h1 className="text-[52px] md:text-[64px] font-black uppercase tracking-tighter text-primary-text mb-4 font-sans leading-tight">
 						{project.title}
 					</h1>
@@ -164,7 +154,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 								{project.techStack.map((tech) => (
 									<span
 										key={tech}
-										className="px-3 py-2 bg-surface border border-border-light text-sm font-medium text-primary-text font-sans"
+										className="px-3 py-2 bg-white/80 border border-border-light text-sm font-medium text-primary-text font-sans"
 									>
 										{tech}
 									</span>
