@@ -9,7 +9,6 @@ export default function ProjectLoading() {
 
 				{/* Header Skeleton */}
 				<div className="mb-12">
-					<div className="h-8 w-24 bg-skeleton rounded mb-4 animate-pulse" />
 					<div className="space-y-3 mb-4">
 						<div className="h-16 bg-skeleton rounded w-3/4 animate-pulse" />
 						<div className="h-16 bg-skeleton rounded w-2/3 animate-pulse" />

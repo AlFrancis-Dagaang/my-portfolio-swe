@@ -41,13 +41,13 @@ export default function ProjectsLoading() {
 					</div>
 				</div>
 
-				{/* Filter Tabs Skeleton */}
-				<div className="mb-12 flex flex-wrap gap-2 sm:gap-3">
-					{[...Array(6)].map((_, i) => (
+				{/* Filter Tabs Skeleton — pill-shaped, centered */}
+				<div className="mb-12 flex flex-wrap justify-center gap-2 sm:gap-3">
+					{["w-12", "w-14", "w-16", "w-14", "w-20", "w-20"].map((w, i) => (
 						<div
 							// biome-ignore lint/suspicious/noArrayIndexKey: static skeleton array, no reordering
 							key={i}
-							className="h-10 w-20 bg-skeleton rounded border border-border-light animate-pulse"
+							className={`h-9 sm:h-10 bg-skeleton rounded-full border border-border-light animate-pulse ${w} sm:${w}`}
 						/>
 					))}
 				</div>
