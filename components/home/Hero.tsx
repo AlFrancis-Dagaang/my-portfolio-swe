@@ -1,69 +1,54 @@
 import Image from "next/image";
-import Link from "next/link";
 import { Container } from "../layout/Container";
+import { Button } from "../ui/Button";
+import { Dash } from "../ui/Dash";
 
 export default function Hero() {
 	return (
-		<section className="relative pt-12 pb-16 md:pt-24 md:pb-28 overflow-hidden bg-transparent max-w-full">
-			<div className="absolute inset-0 -z-10 overflow-hidden">
-				<div className="absolute top-20 left-1/2 -translate-x-1/2 w-125 h-125 rounded-full bg-brand/10 blur-[120px]" />
-			</div>
-			<Container className="relative">
-				{/* Utilizing a 12-column grid layout for precise alignment */}
-				<div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-8 items-center">
-					{/* Left Column: Text content (Spans 8 columns on large screens) */}
-					{/* z-10 ensures your typography stays cleanly layered on top of the image */}
-					<div className="flex flex-col space-y-6 lg:col-span-8 z-10 select-text">
-						{/* Huge SaaS Headline */}
-						<h1 className="text-[52px] sm:text-7xl md:text-[84px] lg:text-[92px] font-black tracking-tighter uppercase text-primary-text leading-[0.88] font-sans">
-							AL FRANCIS <br />
-							<span className="text-brand">DAGA-ANG</span>
+		<section className="relative pt-12 pb-8 md:pt-16 md:pb-12 lg:pt-0 lg:pb-0 xl:pt-24 xl:pb-28 overflow-hidden bg-transparent max-w-full min-h-[80vh] flex items-center">
+			<Container className="relative w-full">
+				<div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+					{/* Left Column: Text content */}
+					<div className="flex flex-col space-y-4 lg:col-span-7 xl:col-span-7 z-10 select-text">
+						{/* Greeting */}
+						<h2 className="text-3xl md:text-4xl lg:text-4xl xl:text-5xl font-bold text-primary-text tracking-tight flex items-end">
+							Hello <span className="text-brand font-black ml-[2px]">.</span>
+						</h2>
+
+						{/* Name with Dash */}
+						<div className="flex items-center gap-4 md:gap-6">
+							<Dash className="shrink-0" />
+							<h2 className="text-3xl md:text-4xl lg:text-4xl xl:text-5xl font-bold text-primary-text tracking-tight whitespace-nowrap">
+								I&apos;m Al Francis
+							</h2>
+						</div>
+
+						{/* Main Headline */}
+						<h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[52px] xl:text-[76px] font-bold tracking-tight text-primary-text leading-tight mt-2 whitespace-nowrap">
+							Software <span className="text-brand">Engineer</span>
 						</h1>
 
-						{/* Subtitle / Tagline */}
-						<p className="text-xl md:text-2xl font-bold text-primary-text tracking-tight font-sans pt-2">
-							Hi, I&apos;m a Software Engineer and Cloud Enthusiast.
-						</p>
-
-						{/* 
-                          CRITICAL FIX: Changed max-w-xl to max-w-md (or max-w-[460px]).
-                          This prevents the paragraph from stretching into the right side, 
-                          keeping it perfectly readable and clear of the photo.
-                        */}
-						<p className="text-base font-normal text-muted leading-relaxed max-w-md font-sans">
-							Building highly scalable serverless architectures, robust REST
-							APIs, and modern frontends with clean TypeScript. Focused on
-							performance and optimized cloud infrastructure.
-						</p>
-
-						<div className="pt-2">
-							<Link
-								href="/about"
-								className="text-brand hover:text-brand-dark font-bold text-base transition-colors inline-flex items-center gap-1 group font-sans"
-							>
-								Learn more
-								<span className="transform transition-transform duration-200 group-hover:translate-x-1">
-									→
-								</span>
-							</Link>
+						{/* Action Buttons */}
+						<div className="flex flex-wrap items-center gap-4 pt-4 md:pt-6">
+							<Button href="/projects" variant="primary">
+								My projects
+							</Button>
+							<Button href="/resume" variant="outline">
+								My resume
+							</Button>
 						</div>
 					</div>
 
-					{/* Right Column: Image Wrapper (Spans 4 columns on large screens) */}
-					<div className="lg:col-span-4 relative w-full max-w-full overflow-visible flex justify-center lg:justify-end mt-4 lg:mt-0">
-						{/* 
-                          - lg:-ml-36 pulls the image left so it fits right next to/under the headline text.
-                          - z-0 keeps it structurally backgrounded relative to your copy.
-                        */}
-						<div className="relative w-full max-w-90 sm:max-w-105 lg:max-w-120 lg:scale-115 lg:origin-left-bottom lg:-ml-45 z-0">
+					{/* Right Column: Image Wrapper */}
+					<div className="relative w-full max-w-full flex justify-center lg:justify-end mt-8 lg:mt-0 lg:col-span-5 xl:col-span-5">
+						<div className="relative w-full max-w-[320px] sm:max-w-[400px] lg:max-w-[380px] xl:max-w-[480px] z-0 flex justify-center lg:justify-end">
 							<Image
 								src="/images/profile/profile-v2.png"
 								alt="Al Francis Dagaang Profile Photo"
-								width={500}
-								height={500}
+								width={600}
+								height={600}
 								priority
-								style={{ width: "100%", height: "auto" }}
-								className="object-contain select-none pointer-events-none mix-blend-normal"
+								className="object-contain w-full h-auto max-h-[55vh] xl:max-h-none select-none pointer-events-none mix-blend-normal"
 							/>
 						</div>
 					</div>
