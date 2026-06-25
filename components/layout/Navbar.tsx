@@ -20,17 +20,11 @@ export function Navbar() {
 		<nav className="sticky top-0 z-50 w-full border-b border-border-light bg-white/80 backdrop-blur-md">
 			<Container>
 				<div className="flex h-16 items-center justify-between">
-					{/* Coded SVG/CSS "AF" Logo */}
-					<Link
-						href="/"
-						aria-label="Home"
-						className="flex items-center gap-2 group"
-					>
-						<div className="flex h-9 w-9 items-center justify-center rounded-full border-2 border-[#8B0000] bg-white transition-colors group-hover:bg-[#8B0000]/5">
-							<span className="font-sans font-black text-xs tracking-tighter text-[#8B0000]">
-								AF
-							</span>
-						</div>
+					{/* Updated Text Logo */}
+					<Link href="/" aria-label="Home" className="flex items-center group">
+						<span className=" font-bold text-lg md:text-xl tracking-tight text-primary-text transition-colors">
+							Al Francis <span className="text-brand">Daga-ang</span>
+						</span>
 					</Link>
 
 					{/* Desktop Navigation Link Menu */}
@@ -99,8 +93,9 @@ export function Navbar() {
 									key={link.href}
 									href={link.href}
 									onClick={() => setIsOpen(false)}
+									// Notice: I also updated the active mobile background to use Tailwind arbitrary values to match your new #ff7354 brand color opacity if needed, or you can use bg-brand/5
 									className={`block px-3 py-2 text-base font-medium rounded-md ${
-										isActive ? "text-brand bg-[#8B0000]/5" : "text-primary-text"
+										isActive ? "text-brand bg-brand/10" : "text-primary-text"
 									}`}
 								>
 									{link.name}
