@@ -2,8 +2,8 @@
 
 import { useActionState } from "react";
 import { submitContactForm } from "@/actions/contact";
-import { SubmitButton } from "./SubmitButton";
 import type { ContactFormState } from "@/types/contact";
+import { SubmitButton } from "./SubmitButton";
 
 const initialState: ContactFormState = { status: "idle" };
 

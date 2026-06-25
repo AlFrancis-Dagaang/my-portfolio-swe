@@ -1,5 +1,5 @@
-import { FaGithub, FaLinkedin, FaFacebook, FaInstagram } from "react-icons/fa";
-import { MdEmail, MdPhone, MdLocationOn } from "react-icons/md";
+import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { MdEmail, MdLocationOn, MdPhone } from "react-icons/md";
 
 const socials = [
 	{
@@ -50,7 +50,7 @@ export function ContactInfo() {
 				<p className="text-[10px] font-bold uppercase tracking-widest text-brand mb-2 font-sans">
 					Get in touch
 				</p>
-				<h2 className="text-2xl font-black uppercase tracking-tighter text-[#0a0a0a] font-sans">
+				<h2 className="text-2xl font-black uppercase tracking-tighter text-primary-text font-sans">
 					Contact Info
 				</h2>
 				<p className="mt-2 text-sm text-gray-500 font-sans leading-relaxed">
@@ -81,12 +81,12 @@ export function ContactInfo() {
 								{detail.href ? (
 									<a
 										href={detail.href}
-										className="text-sm text-[#0a0a0a] font-sans hover:text-brand transition-colors truncate"
+										className="text-sm text-primary-text font-sans hover:text-brand transition-colors truncate"
 									>
 										{detail.label}
 									</a>
 								) : (
-									<span className="text-sm text-[#0a0a0a] font-sans">
+									<span className="text-sm text-primary-text font-sans">
 										{detail.label}
 									</span>
 								)}
@@ -114,7 +114,7 @@ export function ContactInfo() {
 								target="_blank"
 								rel="noopener noreferrer"
 								aria-label={social.label}
-								className="flex h-10 w-10 items-center justify-center border border-[#e5e7eb] bg-surface hover:border-brand hover:text-brand hover:bg-white transition-colors text-[#0a0a0a]"
+								className="flex h-10 w-10 items-center justify-center border border-[#e5e7eb] bg-surface hover:border-brand hover:text-brand hover:bg-white transition-colors text-primary-text"
 							>
 								<Icon className="h-4 w-4" aria-hidden="true" />
 							</a>
