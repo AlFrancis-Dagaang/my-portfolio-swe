@@ -4,7 +4,7 @@ import { Bio } from "@/components/about/Bio";
 import { Certifications } from "@/components/about/Certifications";
 import { EducationTimeline } from "@/components/about/EducationTimeline";
 import { ExperienceTimeline } from "@/components/about/ExperienceTimeline";
-import { Skills } from "@/components/about/Skills";
+import { TechStackSection } from "@/components/about/Skills";
 import { Container } from "@/components/layout/Container";
 
 import {
@@ -35,17 +35,12 @@ export default async function AboutPage() {
 	]);
 
 	return (
-		<section className="py-12 md:py-20 border-t border-border-light bg-transparent relative">
-			<div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
-				<div className="absolute top-20 left-1/2 -translate-x-1/2 w-125 h-125 rounded-full bg-brand/10 blur-[120px]" />
-			</div>
-			<Container>
-				<Bio />
-				<Skills skills={skills} />
-				<ExperienceTimeline experiences={experiences} />
-				<EducationTimeline educations={educations} />
-				<Certifications certifications={certifications} />
-			</Container>
-		</section>
+		<div className="w-full bg-transparent">
+			<Bio />
+			<TechStackSection skills={skills} />
+			<ExperienceTimeline experiences={experiences} />
+			<EducationTimeline educations={educations} />
+			<Certifications certifications={certifications} />
+		</div>
 	);
 }
