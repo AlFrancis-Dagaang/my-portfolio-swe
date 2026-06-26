@@ -1,30 +1,49 @@
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 import { Container } from "./Container";
 
 export function Footer() {
 	return (
-		<footer className="w-full border-t border-border-light py-8 bg-white/50 backdrop-blur-sm mt-auto">
+		<footer className="w-full py-12 bg-white/80 mt-auto">
 			<Container>
-				<div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 text-sm text-muted">
-					<a
-						href="https://github.com/AlFrancis-Dagaang"
-						target="_blank"
-						rel="noopener noreferrer"
-						className="flex items-center gap-2 hover:text-brand transition-colors"
-					>
-						<FaGithub className="h-4 w-4" />
-						<span>GitHub</span>
-					</a>
-					<span className="hidden sm:inline text-border-light">•</span>
-					<a
-						href="https://www.linkedin.com/in/al-francis-daga-ang-734043348/"
-						target="_blank"
-						rel="noopener noreferrer"
-						className="flex items-center gap-2 hover:text-brand transition-colors"
-					>
-						<FaLinkedin className="h-4 w-4" />
-						<span>LinkedIn</span>
-					</a>
+				<div className="flex flex-col items-center justify-center space-y-4 text-center">
+					{/* Name */}
+					<h3 className="text-xl font-bold text-primary-text">
+						Al Francis Daga-ang
+					</h3>
+
+					{/* Tagline */}
+					<p className="text-sm text-muted">
+						Design with passion, all right reserve for Al Francis Daga-ang
+					</p>
+
+					{/* Social Icons */}
+					<div className="flex items-center gap-6 pt-2">
+						<a
+							href="mailto:dagaang.alfrancis@gmail.com" // Don't forget to add your actual email here!
+							className="text-gray-800 hover:text-brand transition-colors"
+							aria-label="Email"
+						>
+							<FaEnvelope className="h-6 w-6" />
+						</a>
+						<a
+							href="https://github.com/AlFrancis-Dagaang"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="text-gray-800 hover:text-brand transition-colors"
+							aria-label="GitHub"
+						>
+							<FaGithub className="h-6 w-6" />
+						</a>
+						<a
+							href="https://www.linkedin.com/in/al-francis-daga-ang-734043348/"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="text-gray-800 hover:text-brand transition-colors"
+							aria-label="LinkedIn"
+						>
+							<FaLinkedin className="h-6 w-6" />
+						</a>
+					</div>
 				</div>
 			</Container>
 		</footer>

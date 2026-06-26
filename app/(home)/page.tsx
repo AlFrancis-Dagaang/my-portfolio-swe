@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
-import { ContactCTA } from "@/components/sections/ContactCTA";
-import { FeaturedProjects } from "@/components/sections/FeaturedProjects";
-import Hero from "@/components/sections/Hero";
-import { TechStack } from "@/components/sections/TechStack";
+import About from "@/components/home/About";
+import { ContactCTA } from "@/components/home/ContactCTA";
+import { FeaturedProjects } from "@/components/home/FeaturedProjects";
+import Hero from "@/components/home/Hero";
+import { TechStack } from "@/components/home/TechStack";
 import { getFeaturedProjects } from "@/lib/projects";
 
 export const metadata: Metadata = {
-	title: "Al Francis Daga-ang — Software Engineer",
+	title: "Al Francis Daga-ang",
 	description:
 		"Portfolio of Al Francis Dagaang, a Software Engineer and Cloud Enthusiast specializing in Next.js, React, and AWS.",
 	openGraph: {
@@ -24,6 +25,7 @@ export default async function HomePage() {
 		<div className="w-full bg-transparent">
 			<Hero />
 			<TechStack />
+			<About />
 			<FeaturedProjects projects={featuredProjects} />
 			<ContactCTA />
 		</div>
