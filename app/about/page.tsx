@@ -5,7 +5,6 @@ import { Certifications } from "@/components/about/Certifications";
 import { EducationTimeline } from "@/components/about/EducationTimeline";
 import { ExperienceTimeline } from "@/components/about/ExperienceTimeline";
 import { TechStackSection } from "@/components/about/Skills";
-import { Container } from "@/components/layout/Container";
 
 import {
 	getCertifications,
