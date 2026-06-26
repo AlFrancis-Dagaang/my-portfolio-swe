@@ -1,20 +1,36 @@
 import Link from "next/link";
 import { Container } from "@/components/layout/Container";
+import { Button } from "../ui/Button";
 
 export function ContactCTA() {
 	return (
-		<section className="py-20 border-t border-border-light bg-white/40 backdrop-blur-md">
+		<section className="py-20 bg-transparent">
 			<Container>
-				<div className="flex flex-col items-center justify-center text-center space-y-6 max-w-2xl mx-auto">
-					<h2 className="text-4xl md:text-5xl font-bold uppercase text-primary-text font-sans tracking-tight">
-						Let&apos;s work together
+				{/* Header Section: Stacked on mobile, side-by-side on desktop */}
+				<div className="flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-6 mb-12">
+					{/* Title: Order 1 on mobile (top), Order 2 on desktop (right of dash) */}
+					<h2 className="text-2xl font-bold text-primary-text order-1 md:order-2">
+						Contact
 					</h2>
-					<Link
-						href="/contact"
-						className="px-8 py-3.5 bg-brand text-white font-medium text-sm rounded-none hover:bg-brand-dark transition-colors uppercase tracking-wider font-sans"
-					>
-						Get in touch
-					</Link>
+
+					{/* Dash: Order 2 on mobile (bottom), Order 1 on desktop (left of title) */}
+					<div className="h-[3px] w-12 bg-brand order-2 md:order-1" />
+				</div>
+
+				{/* Main CTA Content (Remains centered) */}
+				<div className="flex flex-col items-center justify-center text-center space-y-6 max-w-2xl mx-auto">
+					<p className="text-4xl md:text-5xl font-black text-primary-text tracking-tight">
+						Have a project ?
+					</p>
+
+					<p className="text-4xl md:text-5xl font-black text-brand tracking-tight">
+						Let&apos;s talk!
+					</p>
+
+					{/* Button */}
+					<Button href="/contact" variant="primary">
+						Contact Me
+					</Button>
 				</div>
 			</Container>
 		</section>

@@ -32,7 +32,7 @@ export async function TechStack() {
 		...skillList.map((skill) => ({ ...skill, instanceId: `${skill.name}-d` })),
 	];
 	return (
-		<section className="py-8 border-t border-border-light bg-white/40 backdrop-blur-md overflow-hidden">
+		<section className="py-8 border-t border-border-light bg-gray backdrop-blur-md overflow-hidden">
 			<Container>
 				<h2 className="text-sm font-bold tracking-widest uppercase text-primary-text mb-6 font-sans">
 					Tech Stack
