@@ -13,7 +13,7 @@ export default function Hero() {
 					<div className="flex flex-col items-center text-center lg:items-start lg:text-left space-y-4 lg:col-span-7 xl:col-span-7 z-10 select-text">
 						{/* Greeting */}
 						<h2 className="text-3xl md:text-4xl lg:text-4xl xl:text-5xl font-bold text-primary-text tracking-tight flex justify-center lg:justify-start items-end w-full">
-							Hello <span className="text-brand font-black ml-[2px]">.</span>
+							Hello <span className="text-brand font-black ml-0.5">.</span>
 						</h2>
 
 						{/* Name with Dash */}
@@ -49,7 +49,7 @@ export default function Hero() {
 
 					{/* Right Column: Image Wrapper */}
 					<div className="relative z-40 w-full max-w-full flex justify-center lg:justify-end mt-8 lg:mt-0 lg:col-span-5 xl:col-span-5">
-						<div className="relative w-full max-w-[320px] sm:max-w-[400px] lg:max-w-[380px] xl:max-w-[480px] z-0 flex justify-center lg:justify-end">
+						<div className="relative w-full max-w-[320px] sm:max-w-100 lg:max-w-95 xl:max-w-120 z-0 flex justify-center lg:justify-end">
 							<Image
 								src="/images/profile/profile-v2.png"
 								alt="Al Francis Dagaang Profile Photo"
