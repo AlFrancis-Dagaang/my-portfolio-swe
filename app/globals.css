@@ -56,3 +56,42 @@ html {
 .saas-card-hover:hover {
 	border-color: var(--color-brand);
 }
+
+@layer utilities {
+	/* Hides the scrollbar from previous steps just in case */
+	.scrollbar-hide::-webkit-scrollbar {
+		display: none;
+	}
+	.scrollbar-hide {
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+	}
+
+	/* The magic animations for your new scrolling icons */
+	.animate-marquee-left {
+		animation: marquee-left 25s linear infinite;
+	}
+
+	.animate-marquee-right {
+		animation: marquee-right 25s linear infinite;
+	}
+
+	@keyframes marquee-left {
+		0% {
+			transform: translateX(0);
+		}
+		/* Moves it exactly enough to loop seamlessly */
+		100% {
+			transform: translateX(-33.33%);
+		}
+	}
+
+	@keyframes marquee-right {
+		0% {
+			transform: translateX(-33.33%);
+		}
+		100% {
+			transform: translateX(0);
+		}
+	}
+}
