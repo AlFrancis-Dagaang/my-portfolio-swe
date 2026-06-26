@@ -1,5 +1,5 @@
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 import { Container } from "@/components/layout/Container";
 import type { Project } from "@/types/project";
 import { Button } from "../ui/Button";

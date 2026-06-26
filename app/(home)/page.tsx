@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
+import About from "@/components/home/About";
 import { ContactCTA } from "@/components/home/ContactCTA";
 import { FeaturedProjects } from "@/components/home/FeaturedProjects";
 import Hero from "@/components/home/Hero";
 import { TechStack } from "@/components/home/TechStack";
 import { getFeaturedProjects } from "@/lib/projects";
-import About from "@/components/home/About";
 
 export const metadata: Metadata = {
 	title: "Al Francis Daga-ang",
