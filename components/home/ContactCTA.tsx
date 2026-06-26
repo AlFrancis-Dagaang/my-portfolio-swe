@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Container } from "@/components/layout/Container";
 import { Button } from "../ui/Button";
 
@@ -14,7 +13,7 @@ export function ContactCTA() {
 					</h2>
 
 					{/* Dash: Order 2 on mobile (bottom), Order 1 on desktop (left of title) */}
-					<div className="h-[3px] w-12 bg-brand order-2 md:order-1" />
+					<div className="h-0.75 w-12 bg-brand order-2 md:order-1" />
 				</div>
 
 				{/* Main CTA Content (Remains centered) */}
