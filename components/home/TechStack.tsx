@@ -32,12 +32,8 @@ export async function TechStack() {
 		...skillList.map((skill) => ({ ...skill, instanceId: `${skill.name}-d` })),
 	];
 	return (
-		<section className="py-8 border-t border-border-light bg-gray backdrop-blur-md overflow-hidden">
+		<section className="py-8 border-t border-border-light bg-white/50 backdrop-blur-md overflow-hidden">
 			<Container>
-				<h2 className="text-sm font-bold tracking-widest uppercase text-primary-text mb-6 font-sans">
-					Tech Stack
-				</h2>
-
 				{/* Adding `relative w-full max-w-full` clips any layout breaking 
                   overflow strictly to the container bounds.
                 */}
@@ -59,7 +55,7 @@ export async function TechStack() {
 									className="flex items-center justify-center shrink-0"
 									title={skill.name}
 								>
-									{Icon && <Icon className="h-7 w-7 black" />}
+									{Icon && <Icon className="h-7 w-7 " />}
 								</span>
 							);
 						})}
