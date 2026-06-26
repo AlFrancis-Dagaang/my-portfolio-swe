@@ -4,6 +4,7 @@ import { FeaturedProjects } from "@/components/home/FeaturedProjects";
 import Hero from "@/components/home/Hero";
 import { TechStack } from "@/components/home/TechStack";
 import { getFeaturedProjects } from "@/lib/projects";
+import About from "@/components/home/About";
 
 export const metadata: Metadata = {
 	title: "Al Francis Daga-ang",
@@ -24,6 +25,7 @@ export default async function HomePage() {
 		<div className="w-full bg-transparent">
 			<Hero />
 			<TechStack />
+			<About />
 			<FeaturedProjects projects={featuredProjects} />
 			<ContactCTA />
 		</div>
