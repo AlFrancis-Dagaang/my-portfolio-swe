@@ -3,8 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Container } from "@/components/layout/Container";
-import { getProjectBySlug, getProjects } from "@/lib/projects";
 import { Dash } from "@/components/ui/Dash";
+import { getProjectBySlug, getProjects } from "@/lib/projects";
 
 interface ProjectPageProps {
 	params: Promise<{ slug: string }>;
