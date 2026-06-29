@@ -26,9 +26,15 @@ export function EducationSection() {
 					{/* LEFT SIDE: Text Content */}
 					<div className="space-y-6">
 						{/* Header with Custom Dash */}
-						<div className="flex items-center gap-4">
-							<Dash />
-							<h2 className="text-4xl md:text-5xl font-black text-primary-text">
+						<div className="flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-4">
+							{/* Dash: Order 2 (bottom) on mobile, Order 1 (left) on desktop */}
+							<Dash
+								width="w-16 md:w-24"
+								className="order-2 md:order-1 mt-1 md:mt-0"
+							/>
+
+							{/* Text: Order 1 (top) on mobile, Order 2 (right) on desktop */}
+							<h2 className="text-4xl md:text-5xl font-black text-primary-text order-1 md:order-2">
 								Education
 							</h2>
 						</div>

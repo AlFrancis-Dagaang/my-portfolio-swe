@@ -10,7 +10,7 @@ import {
 } from "react-icons/si";
 import type { Skill } from "@/types/skill";
 import { Container } from "../layout/Container";
-
+import { Dash } from "../ui/Dash";
 // Your existing mappings
 const ICON_MAP: Record<string, IconType> = {
 	java: FaJava,
@@ -69,9 +69,15 @@ export function TechStackSection({ skills }: TechStackProps) {
 				<div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 					{/* LEFT SIDE: Text Content with Dash UI */}
 					<div className="space-y-6">
-						<div className="flex items-center gap-4 mb-4">
-							<div className="h-0.75 w-12 bg-brand" />
-							<span className="font-bold text-lg text-primary-text">
+						<div className="flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-4 mb-4">
+							{/* Use the new width prop! Example: w-8 on mobile, w-12 on desktop */}
+							<Dash
+								width="w-8 md:w-12"
+								className="order-2 md:order-1 mt-1 md:mt-0"
+							/>
+
+							{/* Text: Order 1 (top) on mobile, Order 2 (right) on desktop */}
+							<span className="font-bold text-lg text-primary-text order-1 md:order-2">
 								My Tech Stack
 							</span>
 						</div>
