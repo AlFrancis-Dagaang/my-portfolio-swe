@@ -63,7 +63,7 @@ export default function About() {
 						<h2 className="text-4xl md:text-5xl font-black text-primary-text">
 							About me
 						</h2>
-						<p className="text-lg text-muted leading-relaxed">
+						<p className="text-lg text-primary-text font-medium leading-relaxed">
 							I work primarily with Java & Spring Boot on the server side, and
 							Next.js & React on the front. I enjoy tackling infrastructure
 							challenges, designing REST APIs, and shipping products that are
