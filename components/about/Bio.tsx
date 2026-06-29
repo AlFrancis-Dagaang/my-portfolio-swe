@@ -1,19 +1,20 @@
 import Image from "next/image";
 import { Container } from "../layout/Container";
-
+import { Dash } from "../ui/Dash";
 export function Bio() {
 	return (
 		<section className="py-20 bg-transparent">
 			<Container>
 				{/* Centered Header with Lines */}
 				<div className="flex items-center justify-center gap-4 mb-16">
-					<div className="h-1 w-16 md:w-24 bg-primary-text" />
+					<Dash width="w-16 md:w-24" />
+
 					<h2 className="text-4xl md:text-5xl font-black text-primary-text">
 						About <span className="text-brand">Me</span>
 					</h2>
-					<div className="h-1 w-16 md:w-24 bg-primary-text" />
-				</div>
 
+					<Dash width="w-16 md:w-24" />
+				</div>
 				{/* NEW GRID LAYOUT: 12 columns instead of 2 equal columns */}
 				{/* max-w-5xl mx-auto keeps the whole block nicely centered so it doesn't stretch too wide on huge screens */}
 				<div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-start max-w-5xl mx-auto">

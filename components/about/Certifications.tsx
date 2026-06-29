@@ -68,7 +68,7 @@ function CertCard({ cert }: { cert: Certification }) {
 			{/* Right Side: Description and Link */}
 			{/* Added text-center for mobile, left-aligned for desktop */}
 			<div className="flex flex-col gap-4 md:w-1/2 items-center md:items-start text-center md:text-left w-full">
-				<p className="text-primary-text/80 leading-relaxed text-sm md:text-base">
+				<p className="text-primary-text/80 leading-relaxed text-sm md:text-base font-medium">
 					{cert.description}
 				</p>
 
