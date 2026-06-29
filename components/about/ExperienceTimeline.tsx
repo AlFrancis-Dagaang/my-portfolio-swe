@@ -1,6 +1,7 @@
 import type { Experience } from "@/types/experience";
-import { SectionEyebrow } from "./SectionEyebrow";
 import { Timeline, TimelineItem } from "./Timeline";
+import { Dash } from "../ui/Dash";
+import { Container } from "../layout/Container"; // Added import
 
 export function ExperienceTimeline({
 	experiences,
@@ -8,29 +9,47 @@ export function ExperienceTimeline({
 	experiences: Experience[];
 }) {
 	return (
-		<div className="mb-20">
-			<SectionEyebrow>Career</SectionEyebrow>
-			<h2 className="text-3xl md:text-4xl font-black uppercase tracking-tighter text-primary-text mb-10 font-sans">
-				Experience
-			</h2>
-			<Timeline>
-				{experiences.map((exp, i) => (
-					<TimelineItem
-						// biome-ignore lint/suspicious/noArrayIndexKey: <>
-						key={i}
-						index={i}
-						label={
-							exp.current
-								? `${exp.startYear} — Present`
-								: `${exp.startYear} — ${exp.endYear}`
-						}
-						title={exp.role}
-						subtitle={exp.company}
-						details={exp.details}
-						active={exp.current}
-					/>
-				))}
-			</Timeline>
-		</div>
+		<section className="py-20">
+			{/* Added Container wrapper here! */}
+			<Container>
+				{/* Centered Header with Brand Dashes */}
+				<div className="flex flex-col items-center justify-center text-center mb-16 space-y-4">
+					<div className="flex items-center justify-center gap-4">
+						{/* Using your custom Dash component! */}
+						<Dash />
+
+						<h2 className="text-4xl md:text-5xl font-black text-primary-text">
+							Experience
+						</h2>
+
+						{/* And here as well! */}
+						<Dash />
+					</div>
+
+					<p className="text-lg text-primary-text max-w-2xl font-medium mx-auto">
+						My career journey and the impact I've made along the way, as told
+						through my work and the words of those I've worked with.
+					</p>
+				</div>
+
+				<Timeline>
+					{experiences.map((exp, i) => (
+						<TimelineItem
+							// biome-ignore lint/suspicious/noArrayIndexKey: <>
+							key={i}
+							index={i}
+							label={
+								exp.current
+									? `${exp.startYear} — Present`
+									: `${exp.startYear} — ${exp.endYear}`
+							}
+							title={exp.role}
+							subtitle={exp.company}
+							details={exp.details}
+						/>
+					))}
+				</Timeline>
+			</Container>
+		</section>
 	);
 }
