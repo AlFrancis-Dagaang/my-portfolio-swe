@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Container } from "@/components/layout/Container";
 import { getProjects } from "@/lib/projects";
 import { ProjectsGrid } from "./_components/ProjectsGrid";
+import { Dash } from "@/components/ui/Dash"; // Add your Dash import!
 
 export const metadata: Metadata = {
 	title: "Projects | Al Francis Daga-ang",
@@ -19,17 +20,19 @@ export default async function ProjectsPage() {
 	const allProjects = await getProjects();
 
 	return (
-		<section className="py-12 md:py-20 border-t border-border-light bg-transparent">
-			<div className="absolute inset-0 -z-10 overflow-hidden">
-				<div className="absolute top-20 left-1/2 -translate-x-1/2 w-125 h-125 rounded-full bg-brand/10 blur-[120px]" />
-			</div>
+		<section className="py-12 md:py-20 border-t border-border-light bg-transparent relative overflow-hidden">
 			<Container>
-				{/* Header */}
-				<div className="mb-12">
-					<h1 className="text-[52px] md:text-[64px] font-black uppercase tracking-tighter text-primary-text mb-3 font-sans">
-						Projects
-					</h1>
-					<p className="text-lg font-normal text-muted max-w-2xl font-sans">
+				{/* Header: Centered with Dashes on both sides for maximum impact! */}
+				<div className="flex flex-col items-center justify-center text-center mb-16 space-y-4">
+					<div className="flex items-center justify-center gap-4 md:gap-6">
+						<Dash width="w-16 md:w-24" />
+						<h1 className="text-4xl md:text-5xl font-black text-primary-text leading-none">
+							Project<span className="text-brand">s</span>
+						</h1>
+						<Dash width="w-16 md:w-24" />
+					</div>
+
+					<p className="text-lg font-medium text-primary-text/80 max-w-2xl mt-4">
 						A collection of full-stack projects showcasing expertise in cloud
 						infrastructure, modern web development, and scalable APIs.
 					</p>
