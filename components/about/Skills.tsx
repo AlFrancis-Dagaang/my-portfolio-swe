@@ -11,6 +11,7 @@ import {
 import type { Skill } from "@/types/skill";
 import { Container } from "../layout/Container";
 import { Dash } from "../ui/Dash";
+
 // Your existing mappings
 const ICON_MAP: Record<string, IconType> = {
 	java: FaJava,

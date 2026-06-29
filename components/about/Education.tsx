@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { Dash } from "../ui/Dash";
 import { Container } from "../layout/Container";
+import { Dash } from "../ui/Dash";
 
 // Hardcoded education data
 const EDUCATION_DATA = {

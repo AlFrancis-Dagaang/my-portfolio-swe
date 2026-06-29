@@ -1,7 +1,7 @@
 import Image from "next/image";
 import type { Certification } from "@/types/certification";
-import { Dash } from "../ui/Dash";
 import { Container } from "../layout/Container";
+import { Dash } from "../ui/Dash";
 
 export function Certifications({
 	certifications,

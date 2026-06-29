@@ -1,7 +1,7 @@
 import type { Experience } from "@/types/experience";
-import { Timeline, TimelineItem } from "./Timeline";
-import { Dash } from "../ui/Dash";
 import { Container } from "../layout/Container"; // Added import
+import { Dash } from "../ui/Dash";
+import { Timeline, TimelineItem } from "./Timeline";
 
 export function ExperienceTimeline({
 	experiences,
