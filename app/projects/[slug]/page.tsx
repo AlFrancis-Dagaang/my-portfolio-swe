@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Container } from "@/components/layout/Container";
 import { getProjectBySlug, getProjects } from "@/lib/projects";
+import { Dash } from "@/components/ui/Dash";
 
 interface ProjectPageProps {
 	params: Promise<{ slug: string }>;
@@ -63,10 +64,19 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
 				{/* Project Header */}
 				<div className="mb-12">
-					<h1 className="text-[52px] md:text-[64px] font-black uppercase tracking-tighter text-primary-text mb-4 font-sans leading-tight">
-						{project.title}
-					</h1>
-					<p className="text-lg font-normal text-muted max-w-3xl font-sans">
+					{/* Flex container to handle the ordering */}
+					<div className="flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-6">
+						<Dash
+							width="w-16 md:w-24"
+							className="order-2 md:order-1 mt-1 md:mt-0"
+						/>
+						<h1 className="text-[52px] md:text-[64px] font-black uppercase tracking-tighter text-primary-text font-sans leading-tight order-1 md:order-2">
+							{project.title}
+						</h1>
+					</div>
+
+					{/* Description sits below the Title/Dash block */}
+					<p className="text-lg text-primary-text font-medium max-w-3xl font-sans mt-4">
 						{project.description}
 					</p>
 				</div>
@@ -89,53 +99,42 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 				<div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
 					{/* Main Content */}
 					<div className="lg:col-span-2 space-y-12">
-						{/* Overview */}
-						{project.overview && (
-							<div>
-								<h2 className="text-xl font-bold uppercase text-primary-text mb-4 font-sans">
-									Overview
-								</h2>
-								<p className="text-base font-normal text-muted leading-relaxed font-sans">
-									{project.overview}
-								</p>
-							</div>
-						)}
-
-						{/* Problem */}
-						{project.problem && (
-							<div>
-								<h2 className="text-xl font-bold uppercase text-primary-text mb-4 font-sans">
-									The Problem
-								</h2>
-								<p className="text-base font-normal text-muted leading-relaxed font-sans">
-									{project.problem}
-								</p>
-							</div>
-						)}
-
-						{/* Solution */}
-						{project.solution && (
-							<div>
-								<h2 className="text-xl font-bold uppercase text-primary-text mb-4 font-sans">
-									The Solution
-								</h2>
-								<p className="text-base font-normal text-muted leading-relaxed font-sans">
-									{project.solution}
-								</p>
-							</div>
+						{/* Overview, Problem, Solution - Indented with Dash */}
+						{[
+							{ title: "Overview", content: project.overview },
+							{ title: "The Problem", content: project.problem },
+							{ title: "The Solution", content: project.solution },
+						].map(
+							(section) =>
+								section.content && (
+									<div key={section.title}>
+										<div className="flex items-center gap-3 mb-4">
+											<Dash width="w-8" />
+											<h2 className="text-xl font-bold uppercase text-primary-text font-sans">
+												{section.title}
+											</h2>
+										</div>
+										<p className="pl-11 text-base font-normal text-primary-text/90 leading-relaxed font-sans max-w-2xl">
+											{section.content}
+										</p>
+									</div>
+								),
 						)}
 
 						{/* Highlights */}
 						{project.highlights && project.highlights.length > 0 && (
 							<div>
-								<h2 className="text-xl font-bold uppercase text-primary-text mb-4 font-sans">
-									Key Highlights
-								</h2>
-								<ul className="space-y-2">
+								<div className="flex items-center gap-3 mb-4">
+									<Dash width="w-8" />
+									<h2 className="text-xl font-bold uppercase text-primary-text font-sans">
+										Key Highlights
+									</h2>
+								</div>
+								<ul className="pl-11 space-y-2">
 									{project.highlights.map((item) => (
 										<li
 											key={item}
-											className="flex items-start gap-3 text-base text-muted font-sans"
+											className="flex items-start gap-3 text-base text-primary-text font-sans"
 										>
 											<span className="text-brand font-bold mt-0.5">→</span>
 											{item}
@@ -147,10 +146,13 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
 						{/* Tech Stack */}
 						<div>
-							<h2 className="text-xl font-bold uppercase text-primary-text mb-4 font-sans">
-								Tech Stack
-							</h2>
-							<div className="flex flex-wrap gap-2">
+							<div className="flex items-center gap-3 mb-4">
+								<Dash width="w-8" />
+								<h2 className="text-xl font-bold uppercase text-primary-text font-sans">
+									Tech Stack
+								</h2>
+							</div>
+							<div className="pl-11 flex flex-wrap gap-2">
 								{project.techStack.map((tech) => (
 									<span
 										key={tech}
@@ -164,10 +166,13 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
 						{/* Tags */}
 						<div>
-							<h2 className="text-xl font-bold uppercase text-primary-text mb-4 font-sans">
-								Tags
-							</h2>
-							<div className="flex flex-wrap gap-2">
+							<div className="flex items-center gap-3 mb-4">
+								<Dash width="w-8" />
+								<h2 className="text-xl font-bold uppercase text-primary-text font-sans">
+									Tags
+								</h2>
+							</div>
+							<div className="pl-11 flex flex-wrap gap-2">
 								{project.tags.map((tag) => (
 									<span
 										key={tag}
