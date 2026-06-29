@@ -5,4 +5,5 @@ export interface Certification {
 	issuedDate: string;
 	description: string;
 	badgeImage: string;
+	certificationImage: string;
 }

@@ -9,7 +9,10 @@ import {
 	SiTypescript,
 } from "react-icons/si";
 import type { Skill } from "@/types/skill";
+import { Container } from "../layout/Container";
+import { Dash } from "../ui/Dash";
 
+// Your existing mappings
 const ICON_MAP: Record<string, IconType> = {
 	java: FaJava,
 	spring: SiSpringboot,
@@ -32,54 +35,105 @@ const SKILL_COLORS: Record<string, string> = {
 	aws: "#FF9900",
 };
 
-function SkillPill({ skill }: { skill: Skill }) {
-	const Icon = ICON_MAP[skill.icon];
-	const color = SKILL_COLORS[skill.icon] ?? "#94a3b8";
-
-	return (
-		<div
-			style={{
-				clipPath: "polygon(8% 0%, 92% 0%, 100% 50%, 92% 100%, 8% 100%, 0% 50%)",
-			}}
-			className="flex items-center gap-1.5 md:gap-2.5 px-4 md:px-6 py-2 md:py-2.5 border border-border-light bg-white/80 hover:border-brand/40 transition-colors duration-200"
-		>
-			{Icon && (
-				<Icon
-					className="shrink-0 h-4 w-4 md:h-5 md:w-5"
-					style={{ color }}
-					aria-hidden="true"
-				/>
-			)}
-			<span
-				className="text-xs md:text-sm font-semibold font-sans tracking-wide whitespace-nowrap"
-				style={{ color }}
-			>
-				{skill.name}
-			</span>
-		</div>
-	);
+interface TechStackProps {
+	skills: Skill[];
 }
 
-export function Skills({ skills }: { skills: Skill[] }) {
-	const top = skills.slice(0, 4);
-	const bottom = skills.slice(4, 8);
+export function TechStackSection({ skills }: TechStackProps) {
+	// Split the skills array in half (e.g., 4 on top, 4 on bottom)
+	const midPoint = Math.ceil(skills.length / 2);
+	const topRow = skills.slice(0, midPoint);
+	const bottomRow = skills.slice(midPoint);
+
+	// Helper component to render an individual icon card
+	const IconCard = ({ skill }: { skill: Skill }) => {
+		const Icon = ICON_MAP[skill.icon];
+		const color = SKILL_COLORS[skill.icon] ?? "#94a3b8";
+
+		return (
+			<div
+				className="w-20 h-20 md:w-24 md:h-24 shrink-0 bg-white rounded-2xl shadow-sm border border-border-light flex flex-col items-center justify-center hover:shadow-md transition-shadow"
+				title={skill.name}
+			>
+				{Icon ? (
+					<Icon className="h-10 w-10 md:h-12 md:w-12" style={{ color }} />
+				) : (
+					<span className="text-xs font-bold text-muted">{skill.name}</span>
+				)}
+			</div>
+		);
+	};
 
 	return (
-		<div className="mb-20">
-			<div className="flex flex-col items-center gap-3">
-				{/* Top row */}
-				<div className="flex flex-wrap justify-center gap-2 md:gap-3">
-					{top.map((skill) => (
-						<SkillPill key={skill.name} skill={skill} />
-					))}
+		<section className="py-20 bg-white/50 overflow-hidden">
+			<Container>
+				<div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+					{/* LEFT SIDE: Text Content with Dash UI */}
+					<div className="space-y-6">
+						<div className="flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-4 mb-4">
+							{/* Use the new width prop! Example: w-8 on mobile, w-12 on desktop */}
+							<Dash
+								width="w-8 md:w-12"
+								className="order-2 md:order-1 mt-1 md:mt-0"
+							/>
+
+							{/* Text: Order 1 (top) on mobile, Order 2 (right) on desktop */}
+							<span className="font-bold text-lg text-primary-text order-1 md:order-2">
+								My Tech Stack
+							</span>
+						</div>
+
+						<h2 className="text-4xl md:text-5xl font-black text-primary-text leading-tight tracking-tight">
+							Key Technologies & <br /> Platforms
+						</h2>
+
+						<p className="text-lg text-muted leading-relaxed max-w-md">
+							I work with leading platforms and technologies that empower
+							digital transformation, accelerate delivery, and drive measurable
+							business results.
+						</p>
+					</div>
+
+					{/* RIGHT SIDE: Animated Marquee Container */}
+					{/* Mask image creates the fade out effect on the left and right edges */}
+					<div
+						className="relative bg-[#f1f5f9] rounded-4xl p-8 md:p-12 overflow-hidden flex flex-col gap-6 border border-border-light/50"
+						style={{
+							maskImage:
+								"linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
+							WebkitMaskImage:
+								"linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
+						}}
+					>
+						{/* TOP ROW: Moving Left */}
+						<div className="flex w-max animate-marquee-left gap-6 hover:[animation-play-state:paused]">
+							{/* We double the array so the scroll loops infinitely seamlessly */}
+							{[...topRow, ...topRow, ...topRow].map((skill, idx) => (
+								<IconCard
+									key={`top-${skill.name}-${
+										// biome-ignore lint/suspicious/noArrayIndexKey: <>
+										idx
+									}`}
+									skill={skill}
+								/>
+							))}
+						</div>
+
+						{/* BOTTOM ROW: Moving Right */}
+						<div className="flex w-max animate-marquee-right gap-6 hover:[animation-play-state:paused]">
+							{[...bottomRow, ...bottomRow, ...bottomRow].map((skill, idx) => (
+								<IconCard
+									key={`bottom-${skill.name}-${
+										// biome-ignore lint/suspicious/noArrayIndexKey: <>
+										idx
+									}`}
+									skill={skill}
+								/>
+							))}
+						</div>
+					</div>
 				</div>
-				{/* Bottom row */}
-				<div className="flex flex-wrap justify-center gap-2 md:gap-3">
-					{bottom.map((skill) => (
-						<SkillPill key={skill.name} skill={skill} />
-					))}
-				</div>
-			</div>
-		</div>
+			</Container>
+		</section>
 	);
 }

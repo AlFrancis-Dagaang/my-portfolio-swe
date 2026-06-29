@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Container } from "@/components/layout/Container";
 import type { Project } from "@/types/project";
 import { Button } from "../ui/Button";
+import { Dash } from "../ui/Dash";
 
 interface FeaturedProjectsProps {
 	projects: Project[];
@@ -16,21 +17,22 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
 		<section className="py-20 bg-white/50">
 			<Container>
 				{/* Header Section */}
-				<div className="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-6 mb-12">
-					{/* Title: Order 1 on mobile (top), Order 2 on desktop (right of dash) */}
+				<div className="flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-4 mb-12">
+					<Dash width="w-20" className="order-2 md:order-1 mt-1 md:mt-0" />
+
 					<h2 className="text-4xl font-bold text-primary-text order-1 md:order-2">
 						Featured Projects
 					</h2>
 
-					{/* Dash: Order 2 on mobile (bottom), Order 1 on desktop (left of title) */}
-					<div className="h-[3px] w-20 bg-brand order-2 md:order-1" />
-
 					{/* Desktop Link: Hidden on mobile, pushed to the right on desktop */}
 					<Link
 						href="/projects"
-						className="hidden md:inline-flex ml-auto text-brand font-bold hover:text-brand-dark transition-colors order-3"
+						className="hidden md:inline-flex ml-auto text-brand font-bold hover:opacity-80 transition-opacity order-3"
 					>
-						View all projects →
+						View all projects{" "}
+						<span aria-hidden="true" className="ml-1">
+							→
+						</span>
 					</Link>
 				</div>
 

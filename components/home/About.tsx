@@ -49,7 +49,7 @@ export default function About() {
 									<div className="text-primary-text">
 										<Icon d={item.d} title={item.title} />
 									</div>
-									<h3 className="text-xl md:text-2xl font-bold text-primary-text">
+									<h3 className="text-xl md:text-2xl text-primary-text">
 										{item.title}
 									</h3>
 								</div>
