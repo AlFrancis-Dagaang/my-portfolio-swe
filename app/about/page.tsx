@@ -2,16 +2,11 @@ import type { Metadata } from "next";
 
 import { Bio } from "@/components/about/Bio";
 import { Certifications } from "@/components/about/Certifications";
-import { EducationTimeline } from "@/components/about/EducationTimeline";
+import { EducationSection } from "@/components/about/Education";
 import { ExperienceTimeline } from "@/components/about/ExperienceTimeline";
 import { TechStackSection } from "@/components/about/Skills";
 
-import {
-	getCertifications,
-	getEducation,
-	getExperience,
-	getSkills,
-} from "@/lib/about";
+import { getCertifications, getExperience, getSkills } from "@/lib/about";
 
 export const metadata: Metadata = {
 	title: "About | Al Francis Daga-ang",
@@ -26,9 +21,8 @@ export const metadata: Metadata = {
 };
 
 export default async function AboutPage() {
-	const [experiences, educations, certifications, skills] = await Promise.all([
+	const [experiences, certifications, skills] = await Promise.all([
 		getExperience(),
-		getEducation(),
 		getCertifications(),
 		getSkills(),
 	]);
@@ -38,7 +32,7 @@ export default async function AboutPage() {
 			<Bio />
 			<TechStackSection skills={skills} />
 			<ExperienceTimeline experiences={experiences} />
-			<EducationTimeline educations={educations} />
+			<EducationSection />
 			<Certifications certifications={certifications} />
 		</div>
 	);
