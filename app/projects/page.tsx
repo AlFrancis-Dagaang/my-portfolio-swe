@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/layout/Container";
+import { Dash } from "@/components/ui/Dash"; // Add your Dash import!
 import { getProjects } from "@/lib/projects";
 import { ProjectsGrid } from "./_components/ProjectsGrid";
-import { Dash } from "@/components/ui/Dash"; // Add your Dash import!
 
 export const metadata: Metadata = {
 	title: "Projects | Al Francis Daga-ang",
