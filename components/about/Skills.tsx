@@ -65,7 +65,7 @@ export function TechStackSection({ skills }: TechStackProps) {
 	};
 
 	return (
-		<section className="py-20 bg-white/50 overflow-hidden">
+		<section className="py-20 bg-white/70 overflow-hidden">
 			<Container>
 				<div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 					{/* LEFT SIDE: Text Content with Dash UI */}

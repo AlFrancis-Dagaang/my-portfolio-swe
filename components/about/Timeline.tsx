@@ -100,7 +100,7 @@ function TimelineCard({
 	showLabel: boolean;
 }) {
 	return (
-		<div className="w-full p-6 md:p-8 rounded-2xl bg-white/50 shadow-sm transition-shadow hover:shadow-md">
+		<div className="w-full p-6 md:p-8 rounded-2xl bg-white/70 shadow-sm transition-shadow hover:shadow-md">
 			{showLabel && (
 				<p className="text-sm font-bold text-primary-text mb-3 font-sans">
 					{label}

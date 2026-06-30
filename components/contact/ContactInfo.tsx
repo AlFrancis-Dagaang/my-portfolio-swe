@@ -9,17 +9,17 @@ const socials = [
 	},
 	{
 		label: "LinkedIn",
-		href: "https://linkedin.com/in/yourprofile",
+		href: "https://www.linkedin.com/in/al-francis-daga-ang-734043348",
 		icon: FaLinkedin,
 	},
 	{
 		label: "Facebook",
-		href: "https://facebook.com/yourprofile",
+		href: "https://www.facebook.com/al.francis.daga.ang.2025",
 		icon: FaFacebook,
 	},
 	{
 		label: "Instagram",
-		href: "https://instagram.com/yourprofile",
+		href: "https://www.instagram.com/polleewag/",
 		icon: FaInstagram,
 	},
 ];
@@ -31,12 +31,12 @@ const contactDetails = [
 		icon: MdEmail,
 	},
 	{
-		label: "+63 XXX XXX XXXX",
-		href: "tel:+63XXXXXXXXXX",
+		label: "+63 960 820 8888",
+		href: null,
 		icon: MdPhone,
 	},
 	{
-		label: "Manila, Philippines",
+		label: "Quezon City, Philippines",
 		href: null,
 		icon: MdLocationOn,
 	},
@@ -44,7 +44,7 @@ const contactDetails = [
 
 export function ContactInfo() {
 	return (
-		<div className="bg-white border border-[#e5e7eb] p-8 flex flex-col gap-8 h-full">
+		<div className="bg-white/70 border border-[#e5e7eb] p-8 flex flex-col gap-8 h-full">
 			{/* Heading */}
 			<div>
 				<p className="text-[10px] font-bold uppercase tracking-widest text-brand mb-2 font-sans">
