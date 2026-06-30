@@ -1,6 +1,9 @@
 "use server";
 
+import { Resend } from "resend";
 import type { ContactFormState } from "@/types/contact";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function submitContactForm(
 	_prevState: ContactFormState,
@@ -21,9 +24,24 @@ export async function submitContactForm(
 		return { status: "error", message: "Please enter a valid email address." };
 	}
 
-	// TODO: swap with real email service (Resend) later
-	return {
-		status: "success",
-		message: "Message sent! I'll get back to you soon.",
-	};
+	try {
+		await resend.emails.send({
+			from: "Contact Form <onboarding@resend.dev>", // replace with your verified domain later
+			to: "dagaang.alfrancis@gmail.com", // your receiving email
+			replyTo: email,
+			subject: `New message from ${name}`,
+			text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
+		});
+
+		return {
+			status: "success",
+			message: "Message sent! I'll get back to you soon.",
+		};
+	} catch (error) {
+		console.error("Resend error:", error);
+		return {
+			status: "error",
+			message: "Something went wrong. Please try again later.",
+		};
+	}
 }
