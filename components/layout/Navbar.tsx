@@ -93,7 +93,6 @@ export function Navbar() {
 									key={link.href}
 									href={link.href}
 									onClick={() => setIsOpen(false)}
-									// Notice: I also updated the active mobile background to use Tailwind arbitrary values to match your new #ff7354 brand color opacity if needed, or you can use bg-brand/5
 									className={`block px-3 py-2 text-base font-medium rounded-md ${
 										isActive ? "text-brand bg-brand/10" : "text-primary-text"
 									}`}

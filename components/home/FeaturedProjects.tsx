@@ -83,7 +83,7 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
 					</div>
 				</div>
 
-				{/* Mobile Link: Shown only on mobile, placed below the project grid */}
+				{/* Mobile Link*/}
 				<div className="mt-12 flex md:hidden">
 					<Link
 						href="/projects"

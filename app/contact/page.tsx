@@ -16,7 +16,7 @@ export default function ContactPage() {
 				<div className="flex flex-col-reverse md:flex-row items-start md:items-center gap-2 md:gap-6 mb-4">
 					<Dash width="w-16 md:w-24" />
 					<h1 className="text-4xl md:text-5xl font-black text-primary-text leading-none font-sans">
-						Let&apos;s work <span className="text-brand">together</span>
+						Let&apos;s Work <span className="text-brand">Together</span>
 					</h1>
 				</div>
 				<p className="font-medium text-primary-text mb-10 font-sans">

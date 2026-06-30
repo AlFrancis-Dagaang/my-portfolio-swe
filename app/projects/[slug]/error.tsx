@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect } from "react";
 import { Container } from "@/components/layout/Container";
+import { Dash } from "@/components/ui/Dash";
 
 interface ErrorProps {
 	error: Error & { digest?: string };
@@ -18,36 +19,21 @@ export default function ProjectError({ error, reset }: ErrorProps) {
 		<section className="py-12 md:py-20 border-t border-border-light bg-transparent min-h-screen flex items-center">
 			<Container>
 				<div className="text-center max-w-2xl mx-auto">
-					{/* Error Icon */}
-					<div className="mb-6 flex justify-center">
-						<div className="inline-flex items-center justify-center w-16 h-16 bg-red-100 rounded-full">
-							<svg
-								className="w-8 h-8 text-brand"
-								fill="none"
-								stroke="currentColor"
-								viewBox="0 0 24 24"
-								aria-hidden="true"
-							>
-								<path
-									strokeLinecap="round"
-									strokeLinejoin="round"
-									strokeWidth={2}
-									d="M12 8v4m0 4v.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-								/>
-							</svg>
-						</div>
+					{/* Formal Error Header with Dashes */}
+					<div className="flex items-center justify-center gap-3 md:gap-6 mb-6 w-full">
+						<Dash width="w-8 sm:w-16 md:w-24" className="shrink-0" />
+						<h1 className="text-4xl sm:text-[52px] md:text-[64px] font-black text-primary-text font-sans leading-none md:whitespace-nowrap text-center">
+							Unexpected Error
+						</h1>
+						<Dash width="w-8 sm:w-16 md:w-24" className="shrink-0" />
 					</div>
 
-					{/* Error Message */}
-					<h1 className="text-[52px] md:text-[64px] font-black uppercase tracking-tighter text-primary-text mb-3 font-sans">
-						Oops!
-					</h1>
-					<p className="text-lg font-normal text-muted mb-6 font-sans">
-						Something went wrong while loading this project. Please try again or
-						go back to the projects list.
+					<p className="text-lg font-normal text-muted mb-8 font-sans">
+						An unexpected error occurred while loading this project. Please try
+						again or go back to the projects list.
 					</p>
 
-					{/* Error Details (Optional - can be hidden in production) */}
+					{/* Error Details */}
 					{process.env.NODE_ENV === "development" && error.message && (
 						<div className="bg-red-50 border border-red-200 rounded p-4 mb-8 text-left">
 							<p className="text-sm font-mono text-red-800 wrap-break-word">

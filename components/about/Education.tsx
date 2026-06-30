@@ -25,15 +25,11 @@ export function EducationSection() {
 				<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 					{/* LEFT SIDE: Text Content */}
 					<div className="space-y-6">
-						{/* Header with Custom Dash */}
 						<div className="flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-4">
-							{/* Dash: Order 2 (bottom) on mobile, Order 1 (left) on desktop */}
 							<Dash
 								width="w-16 md:w-24"
 								className="order-2 md:order-1 mt-1 md:mt-0"
 							/>
-
-							{/* Text: Order 1 (top) on mobile, Order 2 (right) on desktop */}
 							<h2 className="text-4xl md:text-5xl font-black text-primary-text order-1 md:order-2">
 								Education
 							</h2>
@@ -62,7 +58,6 @@ export function EducationSection() {
 					<div
 						className="relative overflow-hidden flex items-center h-50 md:h-62.5"
 						style={{
-							// Adds the smooth fade-out effect on the left and right edges
 							maskImage:
 								"linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
 							WebkitMaskImage:
@@ -70,14 +65,13 @@ export function EducationSection() {
 						}}
 					>
 						<div className="flex w-max animate-marquee-left gap-4 md:gap-6 hover:[animation-play-state:paused]">
-							{/* We triple the array to ensure the infinite scroll never runs out of space to loop */}
 							{[
 								...EDUCATION_DATA.images,
 								...EDUCATION_DATA.images,
 								...EDUCATION_DATA.images,
 							].map((src, idx) => (
 								<div
-									// biome-ignore lint/suspicious/noArrayIndexKey: Required for duplicated marquee items
+									// biome-ignore lint/suspicious/noArrayIndexKey: list is static and items are never reordered
 									key={idx}
 									className="relative w-70 h-45 md:w-[320px] md:h-50 shrink-0 rounded-xl overflow-hidden shadow-sm border border-border-light/50"
 								>

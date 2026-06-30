@@ -40,14 +40,14 @@ export function ProjectsGrid({ projects }: ProjectsGridProps) {
 		<div>
 			{/* MOBILE VIEW: Custom Dropdown */}
 			<div className="mb-12 block sm:hidden relative w-full">
-				{/** biome-ignore lint/a11y/useButtonType: <> */}
 				<button
+					type="button"
 					onClick={() => setIsOpen(!isOpen)}
 					className="w-full flex justify-between items-center bg-white border-2 border-border-light text-primary-text py-3.5 pl-5 pr-5 rounded-2xl font-bold uppercase tracking-wider focus:outline-none focus:border-brand transition-all shadow-sm"
 				>
 					{activeCategory}
-					{/** biome-ignore lint/a11y/noSvgWithoutTitle: <> */}
 					<svg
+						aria-hidden="true"
 						className={`w-6 h-6 text-brand transition-transform ${isOpen ? "rotate-180" : ""}`}
 						fill="none"
 						stroke="currentColor"
@@ -65,8 +65,8 @@ export function ProjectsGrid({ projects }: ProjectsGridProps) {
 				{isOpen && (
 					<div className="absolute top-full left-0 w-full mt-2 bg-white border-2 border-border-light rounded-2xl shadow-xl z-50 overflow-hidden">
 						{CATEGORIES.map((category) => (
-							// biome-ignore lint/a11y/useButtonType: <>
 							<button
+								type="button"
 								key={category}
 								onClick={() => {
 									setIsOpen(false);

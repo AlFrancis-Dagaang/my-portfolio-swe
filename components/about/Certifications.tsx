@@ -11,8 +11,6 @@ export function Certifications({
 	return (
 		<section className="py-20 bg-transparent">
 			<Container>
-				{/* Header aligned to the left with custom Dash */}
-				{/* Note: This stays aligned to the left/dash as requested! */}
 				<div className="flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-4 mb-16">
 					<Dash
 						width="w-16 md:w-24"
@@ -51,7 +49,7 @@ function CertCard({ cert }: { cert: Certification }) {
 					</div>
 				)}
 
-				{/* Added text-center & items-center for mobile, left-aligned for desktop */}
+				{/* Desktop View */}
 				<div className="flex flex-col gap-1.5 text-center md:text-left items-center md:items-start">
 					<p className="text-brand font-bold text-sm md:text-base">
 						{cert.issuer}
@@ -66,7 +64,6 @@ function CertCard({ cert }: { cert: Certification }) {
 			</div>
 
 			{/* Right Side: Description and Link */}
-			{/* Added text-center for mobile, left-aligned for desktop */}
 			<div className="flex flex-col gap-4 md:w-1/2 items-center md:items-start text-center md:text-left w-full">
 				<p className="text-primary-text/80 leading-relaxed text-sm md:text-base font-medium">
 					{cert.description}

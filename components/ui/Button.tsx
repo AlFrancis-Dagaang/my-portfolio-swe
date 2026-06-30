@@ -6,6 +6,8 @@ type ButtonProps = {
 	children: React.ReactNode;
 	variant?: "primary" | "outline";
 	className?: string;
+	target?: React.HTMLAttributeAnchorTarget;
+	rel?: string;
 };
 
 export function Button({
@@ -13,6 +15,8 @@ export function Button({
 	children,
 	variant = "primary",
 	className = "",
+	target,
+	rel,
 }: ButtonProps) {
 	const baseStyles =
 		"inline-flex items-center justify-center px-6 py-3 text-base md:text-lg font-medium transition-colors duration-200";
@@ -27,6 +31,8 @@ export function Button({
 	return (
 		<Link
 			href={href}
+			target={target}
+			rel={rel}
 			className={`${baseStyles} ${variants[variant]} ${className}`}
 		>
 			{children}

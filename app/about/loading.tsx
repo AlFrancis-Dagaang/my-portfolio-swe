@@ -1,184 +1,219 @@
+// app/about/loading.tsx
 import { Container } from "@/components/layout/Container";
 
 export default function AboutLoading() {
 	return (
-		<section className="py-12 md:py-20 border-t border-border-light bg-transparent relative">
-			<div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
-				<div className="absolute top-20 left-1/2 -translate-x-1/2 w-125 h-125 rounded-full bg-brand/10 blur-[120px]" />
-			</div>
+		<div className="w-full bg-transparent animate-pulse">
+			{/* 1. BIO SKELETON */}
+			<section className="py-20 bg-transparent">
+				<Container>
+					{/* Header */}
+					<div className="flex items-center justify-center gap-4 mb-16">
+						<div className="h-1 w-16 md:w-24 bg-gray-300 rounded" />
+						<div className="h-10 md:h-12 w-48 bg-gray-300 rounded-lg" />
+						<div className="h-1 w-16 md:w-24 bg-gray-300 rounded" />
+					</div>
 
-			<Container>
-				{/* ── 1. BIO ───────────────────────────────────────────────────────── */}
-				<div className="mb-20">
-					{/* Large "About" heading */}
-					<div className="h-14 md:h-[72px] w-52 bg-skeleton rounded mb-6 animate-pulse" />
-
-					<div className="max-w-3xl space-y-4">
-						{/* Paragraph 1 */}
-						<div className="space-y-2.5">
-							<div className="h-5 bg-skeleton rounded w-full animate-pulse" />
-							<div className="h-5 bg-skeleton rounded w-[96%] animate-pulse" />
-							<div className="h-5 bg-skeleton rounded w-[88%] animate-pulse" />
+					{/* Grid Layout */}
+					<div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-start max-w-5xl mx-auto">
+						{/* Left: Polaroid Image */}
+						<div className="md:col-span-5 flex justify-center md:justify-end">
+							<div className="relative rotate-[-4deg] bg-white p-3 shadow-xl border border-gray-200">
+								<div className="w-70 h-70 md:w-[320px] md:h-80 bg-gray-300" />
+							</div>
 						</div>
-						{/* Paragraph 2 */}
-						<div className="space-y-2.5">
-							<div className="h-5 bg-skeleton rounded w-full animate-pulse" />
-							<div className="h-5 bg-skeleton rounded w-[82%] animate-pulse" />
+
+						{/* Right: Text Content */}
+						<div className="md:col-span-7 space-y-6 pt-4 md:pl-6 w-full flex flex-col items-center md:items-start">
+							<div className="space-y-3 w-full">
+								<div className="h-4 w-full bg-gray-300 rounded-md" />
+								<div className="h-4 w-full bg-gray-300 rounded-md" />
+								<div className="h-4 w-5/6 bg-gray-300 rounded-md" />
+							</div>
+							<div className="space-y-3 w-full pt-2">
+								<div className="h-4 w-full bg-gray-300 rounded-md" />
+								<div className="h-4 w-11/12 bg-gray-300 rounded-md" />
+								<div className="h-4 w-3/4 bg-gray-300 rounded-md" />
+							</div>
 						</div>
 					</div>
-				</div>
+				</Container>
+			</section>
 
-				{/* ── 2. SKILLS (hexagon pills, two centered rows) ─────────────────── */}
-				<div className="mb-20">
-					<div className="flex flex-col items-center gap-3">
-						{/* Top row — 4 pills */}
-						<div className="flex flex-wrap justify-center gap-2 md:gap-3">
-							{["w-20", "w-28", "w-24", "w-16"].map((w, i) => (
+			{/* 2. TECH STACK SKELETON */}
+			<section className="py-20 bg-white/70 overflow-hidden">
+				<Container>
+					<div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+						{/* Left Side: Text Content */}
+						<div className="space-y-6">
+							<div className="flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-4 mb-4">
+								<div className="h-1 w-8 md:w-12 bg-gray-300 rounded order-2 md:order-1 mt-1 md:mt-0" />
+								<div className="h-6 w-40 bg-gray-300 rounded-md order-1 md:order-2" />
+							</div>
+							<div className="h-20 md:h-24 w-full md:w-3/4 bg-gray-300 rounded-xl" />
+							<div className="space-y-3 w-full max-w-md">
+								<div className="h-4 w-full bg-gray-300 rounded-md" />
+								<div className="h-4 w-5/6 bg-gray-300 rounded-md" />
+							</div>
+						</div>
+
+						{/* Right Side: Marquee Container */}
+						<div className="relative bg-[#f1f5f9] rounded-4xl p-8 md:p-12 overflow-hidden flex flex-col gap-6 border border-gray-200">
+							<div className="flex gap-6 overflow-hidden">
+								{[1, 2, 3, 4].map((i) => (
+									<div
+										key={`top-${i}`}
+										className="w-20 h-20 md:w-24 md:h-24 shrink-0 bg-gray-300 rounded-2xl"
+									/>
+								))}
+							</div>
+							<div className="flex gap-6 overflow-hidden">
+								{[1, 2, 3, 4].map((i) => (
+									<div
+										key={`bottom-${i}`}
+										className="w-20 h-20 md:w-24 md:h-24 shrink-0 bg-gray-300 rounded-2xl"
+									/>
+								))}
+							</div>
+						</div>
+					</div>
+				</Container>
+			</section>
+
+			{/* 3. EXPERIENCE TIMELINE SKELETON */}
+			<section className="py-20">
+				<Container>
+					{/* Centered Header */}
+					<div className="flex flex-col items-center justify-center text-center mb-16 space-y-4">
+						<div className="flex items-center justify-center gap-4">
+							<div className="h-1 w-8 bg-gray-300 rounded" />
+							<div className="h-10 md:h-12 w-48 bg-gray-300 rounded-lg" />
+							<div className="h-1 w-8 bg-gray-300 rounded" />
+						</div>
+						<div className="h-12 w-full max-w-2xl mx-auto bg-gray-300 rounded-lg" />
+					</div>
+
+					{/* Timeline */}
+					<div className="relative z-10 max-w-4xl mx-auto">
+						<div className="hidden md:block absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-0.5 bg-gray-300" />
+						<div className="block md:hidden absolute left-1.75 top-0 bottom-0 w-0.5 bg-gray-300" />
+
+						<div className="space-y-8 md:space-y-12">
+							{[1, 2].map((i) => (
 								<div
-									// biome-ignore lint/suspicious/noArrayIndexKey: static skeleton
 									key={i}
-									style={{
-										clipPath:
-											"polygon(8% 0%, 92% 0%, 100% 50%, 92% 100%, 8% 100%, 0% 50%)",
-									}}
-									className={`h-9 md:h-10 bg-skeleton animate-pulse ${w}`}
+									className="relative flex md:grid md:grid-cols-2 gap-12 items-center pl-8 md:pl-0"
+								>
+									<span className="md:hidden absolute left-0 top-6 w-4 h-4 rounded-full bg-gray-300 z-10" />
+									<span className="hidden md:block absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-gray-300 z-10" />
+
+									{/* Alternating logic simulation */}
+									{i % 2 !== 0 ? (
+										<>
+											<div className="w-full p-6 md:p-8 rounded-2xl bg-white shadow-sm border border-gray-100">
+												<div className="h-4 w-24 bg-gray-300 rounded mb-3 md:hidden" />
+												<div className="h-6 w-48 bg-gray-300 rounded mb-2" />
+												<div className="h-4 w-32 bg-gray-300 rounded mb-4" />
+												<div className="space-y-2">
+													<div className="h-3 w-full bg-gray-300 rounded" />
+													<div className="h-3 w-5/6 bg-gray-300 rounded" />
+												</div>
+											</div>
+											<div className="hidden md:flex justify-start">
+												<div className="h-4 w-32 bg-gray-300 rounded ml-6" />
+											</div>
+										</>
+									) : (
+										<>
+											<div className="hidden md:flex justify-end">
+												<div className="h-4 w-32 bg-gray-300 rounded mr-6" />
+											</div>
+											<div className="w-full p-6 md:p-8 rounded-2xl bg-white shadow-sm border border-gray-100">
+												<div className="h-4 w-24 bg-gray-300 rounded mb-3 md:hidden" />
+												<div className="h-6 w-48 bg-gray-300 rounded mb-2" />
+												<div className="h-4 w-32 bg-gray-300 rounded mb-4" />
+												<div className="space-y-2">
+													<div className="h-3 w-full bg-gray-300 rounded" />
+													<div className="h-3 w-5/6 bg-gray-300 rounded" />
+												</div>
+											</div>
+										</>
+									)}
+								</div>
+							))}
+						</div>
+					</div>
+				</Container>
+			</section>
+
+			{/* 4. EDUCATION SKELETON */}
+			<section className="py-20 bg-white/70 overflow-hidden">
+				<Container>
+					<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+						{/* Left Side */}
+						<div className="space-y-6">
+							<div className="flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-4">
+								<div className="h-1 w-16 md:w-24 bg-gray-300 rounded order-2 md:order-1 mt-1 md:mt-0" />
+								<div className="h-10 md:h-12 w-48 bg-gray-300 rounded-lg order-1 md:order-2" />
+							</div>
+							<div className="space-y-3 pt-4">
+								<div className="h-8 w-64 md:w-80 bg-gray-300 rounded-md" />
+								<div className="h-6 w-48 bg-gray-300 rounded-md" />
+							</div>
+							<div className="h-4 w-full max-w-md bg-gray-300 rounded-md" />
+						</div>
+
+						{/* Right Side: Images */}
+						<div className="flex overflow-hidden h-50 md:h-62.5 gap-4 md:gap-6">
+							{[1, 2].map((i) => (
+								<div
+									key={i}
+									className="w-70 h-45 md:w-[320px] md:h-50 shrink-0 bg-gray-300 rounded-xl"
 								/>
 							))}
 						</div>
-						{/* Bottom row — 4 pills */}
-						<div className="flex flex-wrap justify-center gap-2 md:gap-3">
-							{["w-24", "w-28", "w-20", "w-16"].map((w, i) => (
-								<div
-									// biome-ignore lint/suspicious/noArrayIndexKey: static skeleton
-									key={i}
-									style={{
-										clipPath:
-											"polygon(8% 0%, 92% 0%, 100% 50%, 92% 100%, 8% 100%, 0% 50%)",
-									}}
-									className={`h-9 md:h-10 bg-skeleton animate-pulse ${w}`}
-								/>
-							))}
-						</div>
 					</div>
-				</div>
+				</Container>
+			</section>
 
-				{/* ── 3. EXPERIENCE ────────────────────────────────────────────────── */}
-				<div className="mb-20">
-					{/* Eyebrow */}
-					<div className="h-2.5 w-12 bg-skeleton rounded mb-2 animate-pulse" />
-					{/* Heading */}
-					<div className="h-9 w-44 bg-skeleton rounded mb-10 animate-pulse" />
-					<TimelineSkeleton rows={2} />
-				</div>
+			{/* 5. CERTIFICATIONS SKELETON */}
+			<section className="py-20 bg-transparent">
+				<Container>
+					<div className="flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-4 mb-16">
+						<div className="h-1 w-16 md:w-24 bg-gray-300 rounded order-2 md:order-1 mt-1 md:mt-0" />
+						<div className="h-10 md:h-12 w-64 bg-gray-300 rounded-lg order-1 md:order-2" />
+					</div>
 
-				{/* ── 4. EDUCATION ─────────────────────────────────────────────────── */}
-				<div className="mb-20">
-					<div className="h-2.5 w-20 bg-skeleton rounded mb-2 animate-pulse" />
-					<div className="h-9 w-40 bg-skeleton rounded mb-10 animate-pulse" />
-					<TimelineSkeleton rows={1} />
-				</div>
-
-				{/* ── 5. CERTIFICATIONS ────────────────────────────────────────────── */}
-				<div className="mb-4">
-					<div className="h-2.5 w-20 bg-skeleton rounded mb-2 animate-pulse" />
-					<div className="h-9 w-52 bg-skeleton rounded mb-8 animate-pulse" />
-
-					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-						{[0, 1, 2].map((i) => (
+					<div className="flex flex-col gap-12 md:gap-16">
+						{[1, 2, 3].map((i) => (
 							<div
 								key={i}
-								className="flex gap-4 p-5 rounded-2xl border border-border-light bg-white/80"
+								className="flex flex-col md:flex-row gap-6 md:gap-12 items-center w-full"
 							>
-								{/* Badge */}
-								<div className="shrink-0 w-14 h-14 bg-skeleton rounded-xl animate-pulse" />
-								{/* Text */}
-								<div className="flex-1 flex flex-col gap-0.5 pt-1 min-w-0">
-									{/* Issuer eyebrow */}
-									<div className="h-2.5 w-14 bg-skeleton rounded animate-pulse" />
-									{/* Title line 1 */}
-									<div className="h-4 bg-skeleton rounded w-full animate-pulse mt-1" />
-									{/* Title line 2 */}
-									<div className="h-4 bg-skeleton rounded w-4/5 animate-pulse" />
-									{/* Date */}
-									<div className="h-3 w-16 bg-skeleton rounded animate-pulse mt-0.5" />
+								{/* Badge and Info */}
+								<div className="flex flex-col md:flex-row items-center gap-6 md:w-1/2 shrink-0">
+									<div className="shrink-0 w-24 h-24 md:w-32 md:h-32 bg-gray-300 rounded-xl" />
+									<div className="flex flex-col gap-3 text-center md:text-left items-center md:items-start w-full">
+										<div className="h-4 w-24 bg-gray-300 rounded" />
+										<div className="h-8 w-48 md:w-64 bg-gray-300 rounded-md" />
+										<div className="h-4 w-32 bg-gray-300 rounded" />
+									</div>
+								</div>
+
+								{/* Description */}
+								<div className="flex flex-col gap-4 md:w-1/2 items-center md:items-start text-center md:text-left w-full">
+									<div className="space-y-2 w-full flex flex-col items-center md:items-start">
+										<div className="h-4 w-full bg-gray-300 rounded" />
+										<div className="h-4 w-5/6 bg-gray-300 rounded" />
+										<div className="h-4 w-4/5 bg-gray-300 rounded" />
+									</div>
+									<div className="h-4 w-32 bg-gray-300 rounded mt-2" />
 								</div>
 							</div>
 						))}
 					</div>
-				</div>
-			</Container>
-		</section>
-	);
-}
-
-function TimelineSkeleton({ rows }: { rows: number }) {
-	return (
-		<div className="relative z-10">
-			{/* ── Mobile: left rail ── */}
-			<div className="block md:hidden absolute left-1.5 top-0 bottom-0 w-0.5 bg-gray-300/80" />
-
-			{/* ── Desktop: center rail ── */}
-			<div className="hidden md:block absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-0.5 bg-gray-300/80" />
-
-			<div className="space-y-8 md:space-y-12">
-				{Array.from({ length: rows }).map((_, i) => {
-					const isLeft = i % 2 === 0;
-					return (
-						// biome-ignore lint/suspicious/noArrayIndexKey: static skeleton array
-						<div key={i}>
-							{/* ── Mobile ── */}
-							<div className="relative flex md:hidden pl-8">
-								<span className="absolute left-0 top-1.5 w-3.5 h-3.5 rounded-full border-2 border-border-light bg-skeleton animate-pulse" />
-								<TimelineCardSkeleton showLabel />
-							</div>
-
-							{/* ── Desktop: alternating two-column ── */}
-							<div className="relative hidden md:grid grid-cols-2 gap-8 items-start">
-								{/* Left side */}
-								<div className={isLeft ? "block" : "flex justify-end"}>
-									{isLeft ? (
-										<TimelineCardSkeleton showLabel={false} />
-									) : (
-										<div className="h-2.5 w-24 bg-skeleton rounded animate-pulse pt-1" />
-									)}
-								</div>
-
-								{/* Center dot */}
-								<span className="absolute left-1/2 -translate-x-1/2 top-2 w-3.5 h-3.5 rounded-full border-2 border-border-light bg-skeleton animate-pulse z-10" />
-
-								{/* Right side */}
-								<div className={!isLeft ? "block" : "flex justify-start"}>
-									{!isLeft ? (
-										<TimelineCardSkeleton showLabel={false} />
-									) : (
-										<div className="h-2.5 w-24 bg-skeleton rounded animate-pulse pt-1" />
-									)}
-								</div>
-							</div>
-						</div>
-					);
-				})}
-			</div>
-		</div>
-	);
-}
-
-function TimelineCardSkeleton({ showLabel }: { showLabel: boolean }) {
-	return (
-		<div className="w-full p-5 rounded-2xl border border-border-light bg-white/80">
-			{showLabel && (
-				<div className="h-2.5 w-24 bg-skeleton rounded animate-pulse mb-1" />
-			)}
-			{/* Role / Degree */}
-			<div className="h-5 w-56 bg-skeleton rounded animate-pulse" />
-			{/* Company / School */}
-			<div className="h-4 w-36 bg-skeleton rounded animate-pulse mt-1.5 mb-3" />
-			{/* Detail bullets */}
-			<div className="space-y-1.5">
-				<div className="h-3.5 bg-skeleton rounded w-full animate-pulse" />
-				<div className="h-3.5 bg-skeleton rounded w-11/12 animate-pulse" />
-				<div className="h-3.5 bg-skeleton rounded w-4/5 animate-pulse" />
-			</div>
+				</Container>
+			</section>
 		</div>
 	);
 }

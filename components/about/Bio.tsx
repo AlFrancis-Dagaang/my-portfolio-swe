@@ -5,7 +5,6 @@ export function Bio() {
 	return (
 		<section className="py-20 bg-transparent">
 			<Container>
-				{/* Centered Header with Lines */}
 				<div className="flex items-center justify-center gap-4 mb-16">
 					<Dash width="w-16 md:w-24" />
 
@@ -15,11 +14,10 @@ export function Bio() {
 
 					<Dash width="w-16 md:w-24" />
 				</div>
-				{/* NEW GRID LAYOUT: 12 columns instead of 2 equal columns */}
-				{/* max-w-5xl mx-auto keeps the whole block nicely centered so it doesn't stretch too wide on huge screens */}
+
+				{/*GRID LAYOUT: 12 columns */}
 				<div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-start max-w-5xl mx-auto">
-					{/* Left: Polaroid Image (takes up 5 of 12 columns) */}
-					{/* md:justify-end pushes the image to the right side of its 5-column block, bringing it closer to the text */}
+					{/* Left: Polaroid Image */}
 					<div className="md:col-span-5 flex justify-center md:justify-end">
 						<div className="relative rotate-[-4deg] bg-white p-3 shadow-xl border border-gray-200 transition-transform hover:rotate-0 duration-300">
 							<Image
@@ -33,8 +31,7 @@ export function Bio() {
 						</div>
 					</div>
 
-					{/* Right: Text Content (takes up 7 of 12 columns, giving it more room) */}
-					{/* md:pl-6 adds just a touch of extra padding so it doesn't touch the image */}
+					{/* Right: Text Content */}
 					<div className="md:col-span-7 space-y-6 text-center md:text-left pt-4 md:pl-6">
 						<p className="text-lg text-primary-text leading-relaxed font-medium">
 							Hey, I'm Al Francis Daga-ang — a full-stack developer based in the

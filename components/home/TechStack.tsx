@@ -34,9 +34,7 @@ export async function TechStack() {
 	return (
 		<section className="py-8 border-t border-border-light bg-white/50 backdrop-blur-md overflow-hidden">
 			<Container>
-				{/* Adding `relative w-full max-w-full` clips any layout breaking 
-                  overflow strictly to the container bounds.
-                */}
+				{/* Clips any layout breaking overflow strictly to the container bounds.*/}
 				<div
 					className="relative w-full max-w-full overflow-hidden"
 					style={{

@@ -40,7 +40,6 @@ export default function About() {
 			<Container>
 				<div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
 					{/* Left Side: Expertise List */}
-					{/* Added 'hidden lg:flex' so it disappears on mobile and shows on large screens */}
 					<div className="hidden lg:flex gap-8">
 						<TimelineLine />
 						<div className="flex flex-col gap-16 py-4">
@@ -58,7 +57,6 @@ export default function About() {
 					</div>
 
 					{/* Right Side: Description */}
-					{/* Added 'items-center text-center lg:items-start lg:text-left' for mobile centering */}
 					<div className="flex flex-col items-center text-center lg:items-start lg:text-left space-y-6">
 						<h2 className="text-4xl md:text-5xl font-black text-primary-text">
 							About me

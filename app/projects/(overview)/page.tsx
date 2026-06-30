@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Container } from "@/components/layout/Container";
 import { Dash } from "@/components/ui/Dash"; // Add your Dash import!
 import { getProjects } from "@/lib/projects";
-import { ProjectsGrid } from "./_components/ProjectsGrid";
+import { ProjectsGrid } from "../../../components/project/ProjectsGrid";
 
 export const metadata: Metadata = {
 	title: "Projects | Al Francis Daga-ang",
@@ -22,12 +22,12 @@ export default async function ProjectsPage() {
 	return (
 		<section className="py-12 md:py-20 border-t border-border-light bg-transparent relative overflow-hidden">
 			<Container>
-				{/* Header: Centered with Dashes on both sides for maximum impact! */}
+				{/* Header */}
 				<div className="flex flex-col items-center justify-center text-center mb-16 space-y-4">
 					<div className="flex items-center justify-center gap-4 md:gap-6">
 						<Dash width="w-16 md:w-24" />
 						<h1 className="text-4xl md:text-5xl font-black text-primary-text leading-none">
-							Project<span className="text-brand">s</span>
+							My <span className="text-brand">Projects</span>
 						</h1>
 						<Dash width="w-16 md:w-24" />
 					</div>
@@ -38,7 +38,7 @@ export default async function ProjectsPage() {
 					</p>
 				</div>
 
-				{/* Projects Grid with Filter (Client Component) */}
+				{/* Projects Grid with Filter */}
 				<ProjectsGrid projects={allProjects} />
 			</Container>
 		</section>
