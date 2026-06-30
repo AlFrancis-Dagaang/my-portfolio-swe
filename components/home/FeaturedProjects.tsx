@@ -14,7 +14,7 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
 	if (!project) return null;
 
 	return (
-		<section className="py-20 bg-white/50">
+		<section className="py-20 bg-white/70">
 			<Container>
 				{/* Header Section */}
 				<div className="flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-4 mb-12">
