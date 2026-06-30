@@ -1,19 +1,19 @@
 import Link from "next/link";
 import { Container } from "@/components/layout/Container";
+import { Dash } from "@/components/ui/Dash";
 
 export default function ProjectNotFound() {
 	return (
 		<section className="py-12 md:py-20 border-t border-border-light bg-transparent min-h-screen flex items-center">
 			<Container>
 				<div className="text-center max-w-2xl mx-auto">
-					{/* 404 Label */}
-					<span className="text-xs font-mono font-medium uppercase text-gray-500 tracking-wider block mb-4">
-						404 — Not Found
-					</span>
-
-					<h1 className="text-[52px] md:text-[64px] font-black uppercase tracking-tighter text-primary-text mb-3 font-sans">
-						Project Not Found
-					</h1>
+					<div className="flex items-center justify-center gap-3 md:gap-6 mb-4 w-full">
+						<Dash width="w-8 sm:w-16 md:w-24" className="shrink-0" />
+						<h1 className="text-4xl sm:text-[52px] md:text-[64px] font-black text-primary-text font-sans leading-none md:whitespace-nowrap text-center">
+							Project Not Found
+						</h1>
+						<Dash width="w-8 sm:w-16 md:w-24" className="shrink-0" />
+					</div>
 					<p className="text-lg font-normal text-muted mb-8 font-sans">
 						The project you're looking for doesn't exist or may have been
 						removed.

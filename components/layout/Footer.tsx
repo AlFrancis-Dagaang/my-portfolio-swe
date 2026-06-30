@@ -19,7 +19,7 @@ export function Footer() {
 					{/* Social Icons */}
 					<div className="flex items-center gap-6 pt-2">
 						<a
-							href="mailto:dagaang.alfrancis@gmail.com" // Don't forget to add your actual email here!
+							href="mailto:dagaang.alfrancis@gmail.com"
 							className="text-gray-800 hover:text-brand transition-colors"
 							aria-label="Email"
 						>

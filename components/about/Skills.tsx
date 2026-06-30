@@ -12,7 +12,6 @@ import type { Skill } from "@/types/skill";
 import { Container } from "../layout/Container";
 import { Dash } from "../ui/Dash";
 
-// Your existing mappings
 const ICON_MAP: Record<string, IconType> = {
 	java: FaJava,
 	spring: SiSpringboot,
@@ -40,7 +39,7 @@ interface TechStackProps {
 }
 
 export function TechStackSection({ skills }: TechStackProps) {
-	// Split the skills array in half (e.g., 4 on top, 4 on bottom)
+	// Split the skills array in half
 	const midPoint = Math.ceil(skills.length / 2);
 	const topRow = skills.slice(0, midPoint);
 	const bottomRow = skills.slice(midPoint);
@@ -71,13 +70,10 @@ export function TechStackSection({ skills }: TechStackProps) {
 					{/* LEFT SIDE: Text Content with Dash UI */}
 					<div className="space-y-6">
 						<div className="flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-4 mb-4">
-							{/* Use the new width prop! Example: w-8 on mobile, w-12 on desktop */}
 							<Dash
 								width="w-8 md:w-12"
 								className="order-2 md:order-1 mt-1 md:mt-0"
 							/>
-
-							{/* Text: Order 1 (top) on mobile, Order 2 (right) on desktop */}
 							<span className="font-bold text-lg text-primary-text order-1 md:order-2">
 								My Tech Stack
 							</span>
@@ -95,7 +91,6 @@ export function TechStackSection({ skills }: TechStackProps) {
 					</div>
 
 					{/* RIGHT SIDE: Animated Marquee Container */}
-					{/* Mask image creates the fade out effect on the left and right edges */}
 					<div
 						className="relative bg-[#f1f5f9] rounded-4xl p-8 md:p-12 overflow-hidden flex flex-col gap-6 border border-border-light/50"
 						style={{
@@ -107,11 +102,10 @@ export function TechStackSection({ skills }: TechStackProps) {
 					>
 						{/* TOP ROW: Moving Left */}
 						<div className="flex w-max animate-marquee-left gap-6 hover:[animation-play-state:paused]">
-							{/* We double the array so the scroll loops infinitely seamlessly */}
 							{[...topRow, ...topRow, ...topRow].map((skill, idx) => (
 								<IconCard
 									key={`top-${skill.name}-${
-										// biome-ignore lint/suspicious/noArrayIndexKey: <>
+										// biome-ignore lint/suspicious/noArrayIndexKey: list is static and items are never reordered
 										idx
 									}`}
 									skill={skill}
@@ -124,7 +118,7 @@ export function TechStackSection({ skills }: TechStackProps) {
 							{[...bottomRow, ...bottomRow, ...bottomRow].map((skill, idx) => (
 								<IconCard
 									key={`bottom-${skill.name}-${
-										// biome-ignore lint/suspicious/noArrayIndexKey: <>
+										// biome-ignore lint/suspicious/noArrayIndexKey: list is static and items are never reordered
 										idx
 									}`}
 									skill={skill}

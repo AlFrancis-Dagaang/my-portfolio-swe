@@ -116,7 +116,7 @@ function TimelineCard({
 				<ul className="space-y-2">
 					{details.map((d, i) => (
 						<li
-							// biome-ignore lint/suspicious/noArrayIndexKey: <>
+							// biome-ignore lint/suspicious/noArrayIndexKey: list is static and items are never reordered
 							key={i}
 							className="flex gap-2 text-sm text-muted font-sans leading-relaxed"
 						>

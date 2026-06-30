@@ -39,7 +39,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
 				<div className="flex flex-wrap gap-1.5 mb-1">
 					{project.tags.map((tag, i) => (
 						<span key={tag} className="flex items-center gap-1.5">
-							<span className="text-xs font-mono font-medium uppercase text-gray-500 tracking-wider">
+							<span className="text-xs font-sans font-medium uppercase text-gray-500 tracking-wider">
 								{tag}
 							</span>
 							{i < project.tags.length - 1 && (
