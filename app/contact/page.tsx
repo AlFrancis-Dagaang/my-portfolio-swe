@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { Container } from "@/components/layout/Container";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { ContactInfo } from "@/components/contact/ContactInfo";
+import { Container } from "@/components/layout/Container";
 import { Dash } from "@/components/ui/Dash";
 
 export const metadata: Metadata = {
