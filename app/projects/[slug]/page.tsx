@@ -23,12 +23,11 @@ export async function generateMetadata({
 	}
 
 	return {
-		title: `${project.title} — Al Francis Dagaang`,
+		title: `${project.title} | Al Francis Dagaang`,
 		description: project.description,
 		openGraph: {
 			title: project.title,
 			description: project.description,
-			images: project.imageUrl ? [project.imageUrl] : ["/og-image.png"],
 		},
 	};
 }

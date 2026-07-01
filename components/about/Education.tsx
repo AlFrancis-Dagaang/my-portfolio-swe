@@ -9,7 +9,7 @@ const EDUCATION_DATA = {
 	startYear: 2022,
 	endYear: 2026,
 	details: [
-		"Relevant coursework: Data Structures, Algorithms, Cloud Computing",
+		"Relevant coursework: Data Structures, Algorithms, Software Design",
 	],
 	images: [
 		"/images/educations/education_1.JPG",

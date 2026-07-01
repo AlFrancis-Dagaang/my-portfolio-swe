@@ -1,8 +1,8 @@
 export interface Experience {
 	role: string;
 	company: string;
-	startYear: number;
-	endYear: number | null;
+	startDate: string;
+	endDate: string | null;
 	current: boolean;
 	details: string[];
 }

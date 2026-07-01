@@ -16,7 +16,6 @@ export const metadata: Metadata = {
 		title: "About — Al Francis Daga-ang",
 		description:
 			"Full-stack developer passionate about cloud infrastructure, modern web development, and scalable backend systems.",
-		images: ["/og-image.png"],
 	},
 };
 

@@ -34,8 +34,8 @@ export function ExperienceTimeline({
 							index={i}
 							label={
 								exp.current
-									? `${exp.startYear} — Present`
-									: `${exp.startYear} — ${exp.endYear}`
+									? `${exp.startDate} — Present`
+									: `${exp.startDate} — ${exp.endDate}`
 							}
 							title={exp.role}
 							subtitle={exp.company}
