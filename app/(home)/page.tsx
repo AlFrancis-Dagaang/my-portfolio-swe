@@ -9,12 +9,11 @@ import { getFeaturedProjects } from "@/lib/projects";
 export const metadata: Metadata = {
 	title: "Al Francis Daga-ang",
 	description:
-		"Portfolio of Al Francis Dagaang, a Software Engineer and Cloud Enthusiast specializing in Next.js, React, and AWS.",
+		"Portfolio of Al Francis Daga-ang, a Software Engineer and Cloud Enthusiast specializing in Java, React, and AWS.",
 	openGraph: {
-		title: "Al Francis Dagaang — Software Engineer",
+		title: "Al Francis Daga-ang — Software Engineer",
 		description:
-			"Portfolio of Al Francis Dagaang, Software Engineer and Cloud Enthusiast.",
-		images: ["/og-image.png"],
+			"Portfolio of Al Francis Daga-ang, Software Engineer and Cloud Enthusiast.",
 	},
 };
 

@@ -12,7 +12,6 @@ export const metadata: Metadata = {
 		title: "Projects — Al Francis Daga-ang",
 		description:
 			"Full-stack projects showcasing expertise in cloud, web, and API development.",
-		images: ["/og-image.png"],
 	},
 };
 
