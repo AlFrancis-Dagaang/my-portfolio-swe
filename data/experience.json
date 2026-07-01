@@ -2,8 +2,8 @@
 	{
 		"role": "Software Engineer Intern",
 		"company": "Stratpoint",
-		"startYear": 2026,
-		"endYear": null,
+		"startDate": "Jun. 2026",
+		"endDate": null,
 		"current": true,
 		"details": [
 			"Building portfolio website using Next.js 16, React 19, and Tailwind CSS v4",
@@ -13,24 +13,24 @@
 	{
 		"role": "IT Stack Developer Assisstant",
 		"company": "USHER Technologies Inc.",
-		"startYear": 2026,
-		"endYear": 2026,
+		"startDate": "Jan. 2026",
+		"endDate": "Mar. 2026",
 		"current": false,
 		"details": [
 			"Assisted in the development and maintenance of the IT stack for USHER Technologies Inc., contributing to various projects and tasks as needed.",
-			"Collaborated with the IT team to troubleshoot issues, optimize performance, and implement new features across the company's technology infrastructure."
+			"Developed backend REST APIs and contributed to full-stack system delivery, including database design and frontend integration for an inventory system used by 15+ operational staff.",
+			"Improved employee operational workflow efficiency by developing secure stock-tracking APIs and deploying a production-ready inventory system on DigitalOcean within a 2-month timeline."
 		]
 	},
 	{
 		"role": "Cloud and Infrastructure Lead",
 		"company": "AWS Cloud Club - Haribon",
-		"startYear": 2025,
-		"endYear": 2026,
+		"startDate": "Sep. 2025",
+		"endDate": "May. 2026",
 		"current": false,
 		"details": [
-			"Led the cloud and infrastructure initiatives for the AWS Cloud Club - Haribon, a student organization focused on cloud computing education and projects.",
-			"Organized workshops and training sessions on AWS services, cloud architecture, and best practices for club members.",
-			"Guided club projects in designing and deploying cloud-based applications, ensuring they followed industry standards for security and scalability."
+			"Led the Cloud and Infrastructure team, organizing AWS hands-on workshops, study sessions, and technical training for members.",
+			"Mentored students during onboarding and facilitated AWS Cloud Practitioner certification preparation sessions."
 		]
 	}
 ]

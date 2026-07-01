@@ -33,7 +33,7 @@
 		"description": "Telco churn prediction system using machine learning, deployed as a serverless container on AWS Lambda.",
 		"overview": "A full-stack web application that predicts telecom customer churn using a machine learning model served through a serverless AWS Lambda container. The frontend provides an intuitive interface for inputting customer data and viewing churn risk predictions in real time.",
 		"problem": "Telecom companies lose significant revenue when customers switch providers. Identifying at-risk customers before they churn is critical, but manually analyzing customer behavior data is time-consuming and inconsistent without an automated, accessible system.",
-		"solution": "Built a Next.js web interface that communicates with a containerized ML model deployed on AWS Lambda. Users can input customer attributes and receive an instant churn probability prediction. Deploying the model as a serverless container keeps infrastructure costs low while maintaining scalability.",
+		"solution": "Built a web interface that communicates with a containerized ML model deployed on AWS Lambda. Users can input customer attributes and receive an instant churn probability prediction. Deploying the model as a serverless container keeps infrastructure costs low while maintaining scalability.",
 		"highlights": [
 			"ML churn prediction model containerized and deployed on AWS Lambda",
 			"Next.js frontend with TypeScript for type-safe, maintainable code",
@@ -59,7 +59,6 @@
 		"highlights": [
 			"Centralized hub for local government services, events, and announcements",
 			"PostgreSQL database for persistent storage of dynamic barangay content",
-			"Built with Next.js for fast page loads and SEO-friendly public pages",
 			"Responsive design with Tailwind CSS for mobile and desktop residents",
 			"Addresses the lack of digital infrastructure in local Philippine government units"
 		],
