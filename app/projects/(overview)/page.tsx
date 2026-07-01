@@ -20,7 +20,7 @@ export default async function ProjectsPage() {
 	const allProjects = await getProjects();
 
 	return (
-		<section className="py-12 md:py-20 border-t border-border-light bg-transparent relative overflow-hidden">
+		<section className="py-12 md:py-20  bg-transparent relative overflow-hidden">
 			<Container>
 				{/* Header */}
 				<div className="flex flex-col items-center justify-center text-center mb-16 space-y-4">

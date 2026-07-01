@@ -156,7 +156,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 								{project.techStack.map((tech) => (
 									<span
 										key={tech}
-										className="px-3 py-2 bg-white/80 border border-border-light text-sm font-medium text-primary-text font-sans"
+										className="px-3 py-2 bg-white/80 dark:bg-[#052e3e]/80 border border-border-light text-sm font-medium text-primary-text font-sans"
 									>
 										{tech}
 									</span>
@@ -187,7 +187,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 					{/* Sidebar */}
 					<div className="lg:col-span-1">
 						{/* Links Card */}
-						<div className="bg-white border border-border-light p-6 shadow-sm sticky top-24">
+						<div className="bg-white/70 dark:bg-[#052e3e]/70 border border-border-light p-6 shadow-sm sticky top-24">
 							<h3 className="text-lg font-bold uppercase text-primary-text mb-4 font-sans">
 								Links
 							</h3>
@@ -262,9 +262,9 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 									<Link
 										key={tag}
 										href={`/projects?category=${tag}`}
-										className="p-6 border border-border-light bg-white hover:border-brand transition-colors group"
+										className="p-6 border border-border-light bg-white/70 dark:bg-[#052e3e]/70 hover:border-brand transition-colors group font-sans"
 									>
-										<span className="text-xs font-mono font-medium uppercase text-gray-500 tracking-wider">
+										<span className="text-xs font-sans font-medium uppercase text-muted tracking-wider">
 											{tag}
 										</span>
 										<p className="text-lg font-bold text-primary-text group-hover:text-brand transition-colors font-sans">
