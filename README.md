@@ -1,36 +1,114 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Al Francis Daga-ang — Portfolio
+
+Personal portfolio website of Al Francis Daga-ang, a Software and Cloud Engineer specializing in full-stack development and cloud architectures.
+
+🔗 **Live Site:** _Coming soon_
+
+---
+
+## Tech Stack
+
+- **Framework:** Next.js 16 (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS v4
+- **Email:** Resend
+- **Linting:** Biome
+- **Package Manager:** pnpm
+- **Deployment:** Vercel
+
+---
+
+## Features
+
+- Server Components with Metadata API (title, description, Open Graph)
+- Dynamic routes for individual project pages (`/projects/[slug]`)
+- Contact form with Server Actions, `useActionState`, and `useFormStatus`
+- `loading.tsx` skeleton UI on all major routes
+- `error.tsx` boundaries with reset functionality
+- Dark mode toggle — Tailwind v4 `dark:` variant, persisted via `localStorage` with system preference fallback
+- All images via `next/image`
+- Custom Tailwind v4 `@theme` color tokens
+- Responsive design — mobile first
+
+---
+
+## Pages
+
+| Route | Description |
+|---|---|
+| `/` | Home — hero, tech stack, featured projects, CTA |
+| `/about` | About — bio, skills, experience timeline, education |
+| `/projects` | Projects list with category filter |
+| `/projects/[slug]` | Individual project detail page |
+| `/contact` | Contact form with Resend email delivery |
+
+---
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+- Node.js 18+
+- pnpm
+
+### Environment Variables
+
+Create a `.env.local` file in the project root:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+RESEND_API_KEY=re_your_api_key_here
+NEXT_PUBLIC_BASE_URL=http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+> Get your Resend API key at [resend.com](https://resend.com)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Run Locally
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+pnpm install
+pnpm dev
+```
 
-## Learn More
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-To learn more about Next.js, take a look at the following resources:
+### Build for Production
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+pnpm build
+pnpm start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Project Structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+app/
+  (home)/         # Home page route group
+  about/          # About page
+  projects/
+    (overview)/   # Projects list
+    [slug]/       # Individual project
+  contact/        # Contact page
+  globals.css     # Tailwind v4 theme tokens + global styles
+components/
+  about/          # About page components
+  contact/        # Contact form components
+  home/           # Home page sections
+  layout/         # Navbar, Footer, Container
+  project/        # Project card and grid
+  ui/             # Shared UI (Button, Dash)
+data/             # JSON data files (projects, experience, certifications)
+lib/              # Utility functions (projects, theme)
+types/            # TypeScript interfaces
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+See [ARCHITECTURE.md](./ARCHITECTURE.md) for a detailed breakdown of technical decisions.
+
+---
+
+## Environment Variables Reference
+
+| Variable | Description | Required |
+|---|---|---|
+| `RESEND_API_KEY` | Resend API key for contact form email delivery | Yes |
+| `NEXT_PUBLIC_BASE_URL` | Base URL for metadata and API calls | Yes |
