@@ -14,7 +14,7 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
 	if (!project) return null;
 
 	return (
-		<section className="py-20 bg-white/70">
+		<section className="py-20 bg-white/70 dark:bg-[#052e3e]/70">
 			<Container>
 				{/* Header Section */}
 				<div className="flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-4 mb-12">
@@ -48,7 +48,7 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
 							{project.techStack.map((tech) => (
 								<span
 									key={tech}
-									className="px-3 py-1 bg-gray-200 rounded-md text-sm font-medium"
+									className="px-3 py-1 bg-gray-200 dark:bg-[#0a3a4a] rounded-md text-sm font-medium"
 								>
 									{tech}
 								</span>

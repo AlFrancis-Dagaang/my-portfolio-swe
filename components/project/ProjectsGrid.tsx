@@ -43,7 +43,7 @@ export function ProjectsGrid({ projects }: ProjectsGridProps) {
 				<button
 					type="button"
 					onClick={() => setIsOpen(!isOpen)}
-					className="w-full flex justify-between items-center bg-white border-2 border-border-light text-primary-text py-3.5 pl-5 pr-5 rounded-2xl font-bold uppercase tracking-wider focus:outline-none focus:border-brand transition-all shadow-sm"
+					className="w-full flex justify-between items-center bg-white/70 dark:bg-[#052e3e]/70 border-2 border-border-light text-primary-text py-3.5 pl-5 pr-5 rounded-2xl font-bold uppercase tracking-wider focus:outline-none focus:border-brand transition-all shadow-sm"
 				>
 					{activeCategory}
 					<svg
@@ -63,7 +63,7 @@ export function ProjectsGrid({ projects }: ProjectsGridProps) {
 				</button>
 
 				{isOpen && (
-					<div className="absolute top-full left-0 w-full mt-2 bg-white border-2 border-border-light rounded-2xl shadow-xl z-50 overflow-hidden">
+					<div className="absolute top-full left-0 w-full mt-2 bg-white dark:bg-[#052e3e] border-2 border-border-light rounded-2xl shadow-xl z-50 overflow-hidden">
 						{CATEGORIES.map((category) => (
 							<button
 								type="button"
@@ -97,7 +97,11 @@ export function ProjectsGrid({ projects }: ProjectsGridProps) {
 							key={category}
 							href={href}
 							variant={isActive ? "primary" : "outline"}
-							className="px-5! py-2! text-sm! sm:text-base! rounded-full uppercase tracking-wider"
+							className={`px-5! py-2! text-sm! sm:text-base! rounded-full uppercase tracking-wider ${
+								!isActive
+									? "bg-white/80 dark:bg-[#052e3e]/70 !border-border-light"
+									: ""
+							}`}
 						>
 							{category}
 						</Button>

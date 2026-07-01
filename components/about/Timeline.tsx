@@ -32,7 +32,7 @@ export function TimelineItem({
 			{/* ── Mobile: single column ── */}
 			<div className="relative flex md:hidden pl-8">
 				{/* Mobile Dot: Left 0, Width 16px (w-4). Center is 8px! */}
-				<span className="absolute left-0 top-6 w-4 h-4 rounded-full bg-slate-500 z-10" />
+				<span className="absolute left-0 top-6 w-4 h-4 rounded-full bg-slate-500 dark:bg-white z-10" />
 
 				<TimelineCard
 					label={label}
@@ -63,7 +63,7 @@ export function TimelineItem({
 				</div>
 
 				{/* Center Solid Slate Dot */}
-				<span className="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-slate-500 z-10" />
+				<span className="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-slate-500 dark:bg-white z-10" />
 
 				{/* Right side */}
 				<div className={!isLeft ? "block" : "flex justify-start"}>
@@ -100,7 +100,7 @@ function TimelineCard({
 	showLabel: boolean;
 }) {
 	return (
-		<div className="w-full p-6 md:p-8 rounded-2xl bg-white/70 shadow-sm transition-shadow hover:shadow-md">
+		<div className="w-full p-6 md:p-8 rounded-2xl bg-white/70 dark:bg-[#052e3e]/70 shadow-sm transition-shadow hover:shadow-md">
 			{showLabel && (
 				<p className="text-sm font-bold text-primary-text mb-3 font-sans">
 					{label}

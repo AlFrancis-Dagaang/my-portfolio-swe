@@ -32,7 +32,7 @@ export async function TechStack() {
 		...skillList.map((skill) => ({ ...skill, instanceId: `${skill.name}-d` })),
 	];
 	return (
-		<section className="py-8 border-t border-border-light bg-white/50 backdrop-blur-md overflow-hidden">
+		<section className="py-8 border-t border-border-light bg-white/70 dark:bg-[#052e3e]/70 backdrop-blur-md overflow-hidden">
 			<Container>
 				{/* Clips any layout breaking overflow strictly to the container bounds.*/}
 				<div
