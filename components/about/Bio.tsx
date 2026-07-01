@@ -5,13 +5,12 @@ export function Bio() {
 	return (
 		<section className="py-20 bg-transparent">
 			<Container>
-				<div className="flex items-center justify-center gap-4 mb-16">
-					<Dash width="w-16 md:w-24" />
-
-					<h2 className="text-4xl md:text-5xl font-black text-primary-text">
+				<div className="flex items-center justify-center gap-2 md:gap-4 mb-16">
+					<Dash width="w-6 sm:w-12 md:w-24" />
+					<h2 className="text-4xl md:text-5xl font-black text-primary-text text-center leading-tight">
 						About <span className="text-brand">Me</span>
 					</h2>
-					<Dash width="w-16 md:w-24" />
+					<Dash width="w-6 sm:w-12 md:w-24" />
 				</div>
 
 				{/*GRID LAYOUT: 12 columns */}
