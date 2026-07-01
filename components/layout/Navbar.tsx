@@ -3,8 +3,8 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { Container } from "./Container";
 import { useTheme } from "@/lib/theme";
+import { Container } from "./Container";
 
 export function Navbar() {
 	const [isOpen, setIsOpen] = useState(false);

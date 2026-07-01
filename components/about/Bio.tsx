@@ -11,7 +11,6 @@ export function Bio() {
 					<h2 className="text-4xl md:text-5xl font-black text-primary-text">
 						About <span className="text-brand">Me</span>
 					</h2>
-
 					<Dash width="w-16 md:w-24" />
 				</div>
 

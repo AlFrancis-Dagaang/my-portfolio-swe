@@ -26,8 +26,8 @@ export async function submitContactForm(
 
 	try {
 		await resend.emails.send({
-			from: "Contact Form <onboarding@resend.dev>", // replace with your verified domain later
-			to: "dagaang.alfrancis@gmail.com", // your receiving email
+			from: "Contact Form <onboarding@resend.dev>",
+			to: "dagaang.alfrancis@gmail.com",
 			replyTo: email,
 			subject: `New message from ${name}`,
 			text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,

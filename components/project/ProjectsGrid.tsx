@@ -99,7 +99,7 @@ export function ProjectsGrid({ projects }: ProjectsGridProps) {
 							variant={isActive ? "primary" : "outline"}
 							className={`px-5! py-2! text-sm! sm:text-base! rounded-full uppercase tracking-wider ${
 								!isActive
-									? "bg-white/80 dark:bg-[#052e3e]/70 !border-border-light"
+									? "bg-white/80 dark:bg-[#052e3e]/70 border-border-light!"
 									: ""
 							}`}
 						>

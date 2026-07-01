@@ -1,6 +1,5 @@
 "use client";
 
-import { useTheme } from "@/lib/theme";
 import type { IconType } from "react-icons";
 import { FaAws, FaJava } from "react-icons/fa";
 import {
@@ -11,6 +10,7 @@ import {
 	SiTailwindcss,
 	SiTypescript,
 } from "react-icons/si";
+import { useTheme } from "@/lib/theme";
 import type { Skill } from "@/types/skill";
 import { Container } from "../layout/Container";
 import { Dash } from "../ui/Dash";
