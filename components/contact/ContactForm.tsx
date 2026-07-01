@@ -11,7 +11,7 @@ export function ContactForm() {
 	const [state, action] = useActionState(submitContactForm, initialState);
 
 	return (
-		<div className="bg-white/70 border border-[#e5e7eb] p-8 h-full flex flex-col">
+		<div className="bg-white/70 dark:bg-[#052e3e]/70 p-8 h-full flex flex-col">
 			<form action={action} className="flex flex-col gap-6 h-full">
 				<div>
 					<label
@@ -25,7 +25,7 @@ export function ContactForm() {
 						name="name"
 						type="text"
 						required
-						className="w-full border border-gray-300 px-4 py-3 text-sm font-sans focus:outline-none focus:border-brand"
+						className="w-full border border-border-light bg-gray-100 dark:bg-[#0a3a4a] px-4 py-3 text-sm font-sans focus:outline-none focus:border-brand text-primary-text"
 					/>
 				</div>
 
@@ -41,7 +41,7 @@ export function ContactForm() {
 						name="email"
 						type="email"
 						required
-						className="w-full border border-gray-300 px-4 py-3 text-sm font-sans focus:outline-none focus:border-brand"
+						className="w-full border border-border-light bg-gray-100 dark:bg-[#0a3a4a] px-4 py-3 text-sm font-sans focus:outline-none focus:border-brand text-primary-text"
 					/>
 				</div>
 
@@ -56,7 +56,7 @@ export function ContactForm() {
 						id="message"
 						name="message"
 						required
-						className="w-full flex-1 border border-gray-300 px-4 py-3 text-sm font-sans focus:outline-none focus:border-brand resize-none"
+						className="w-full flex-1 border border-border-light bg-gray-100 dark:bg-[#0a3a4a] px-4 py-3 text-sm font-sans focus:outline-none focus:border-brand resize-none text-primary-text"
 					/>
 				</div>
 

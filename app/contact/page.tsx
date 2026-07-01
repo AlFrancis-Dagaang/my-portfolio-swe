@@ -9,9 +9,9 @@ export const metadata: Metadata = {
 	description: "Get in touch with Al Francis Daga-ang.",
 };
 
-export default function ContactPage() {
+export default async function ContactPage() {
 	return (
-		<section className="py-16 md:py-24 border-t border-[#e5e7eb]">
+		<section className="py-16 md:py-24">
 			<Container>
 				<div className="flex flex-col-reverse md:flex-row items-start md:items-center gap-2 md:gap-6 mb-4">
 					<Dash width="w-16 md:w-24" />

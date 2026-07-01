@@ -1,3 +1,5 @@
+"use client";
+
 import type { IconType } from "react-icons";
 import { FaAws, FaJava } from "react-icons/fa";
 import {
@@ -8,6 +10,7 @@ import {
 	SiTailwindcss,
 	SiTypescript,
 } from "react-icons/si";
+import { useTheme } from "@/lib/theme";
 import type { Skill } from "@/types/skill";
 import { Container } from "../layout/Container";
 import { Dash } from "../ui/Dash";
@@ -26,7 +29,6 @@ const ICON_MAP: Record<string, IconType> = {
 const SKILL_COLORS: Record<string, string> = {
 	java: "#E76F00",
 	spring: "#6DB33F",
-	nextjs: "#000000",
 	react: "#61DAFB",
 	typescript: "#3178C6",
 	tailwindcss: "#38BDF8",
@@ -39,19 +41,25 @@ interface TechStackProps {
 }
 
 export function TechStackSection({ skills }: TechStackProps) {
-	// Split the skills array in half
+	const { theme } = useTheme();
+
 	const midPoint = Math.ceil(skills.length / 2);
 	const topRow = skills.slice(0, midPoint);
 	const bottomRow = skills.slice(midPoint);
 
-	// Helper component to render an individual icon card
 	const IconCard = ({ skill }: { skill: Skill }) => {
 		const Icon = ICON_MAP[skill.icon];
-		const color = SKILL_COLORS[skill.icon] ?? "#94a3b8";
+		// Next.js icon is black — flip to white in dark mode
+		const color =
+			skill.icon === "nextjs"
+				? theme === "dark"
+					? "#ffffff"
+					: "#000000"
+				: (SKILL_COLORS[skill.icon] ?? "#94a3b8");
 
 		return (
 			<div
-				className="w-20 h-20 md:w-24 md:h-24 shrink-0 bg-white rounded-2xl shadow-sm border border-border-light flex flex-col items-center justify-center hover:shadow-md transition-shadow"
+				className="w-20 h-20 md:w-24 md:h-24 shrink-0 bg-white dark:bg-[#052e3e] rounded-2xl shadow-sm border border-border-light flex flex-col items-center justify-center hover:shadow-md transition-shadow"
 				title={skill.name}
 			>
 				{Icon ? (
@@ -64,7 +72,7 @@ export function TechStackSection({ skills }: TechStackProps) {
 	};
 
 	return (
-		<section className="py-20 bg-white/70 overflow-hidden">
+		<section className="py-20 bg-white/70 dark:bg-[#052e3e]/70 overflow-hidden">
 			<Container>
 				<div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 					{/* LEFT SIDE: Text Content with Dash UI */}
@@ -92,7 +100,7 @@ export function TechStackSection({ skills }: TechStackProps) {
 
 					{/* RIGHT SIDE: Animated Marquee Container */}
 					<div
-						className="relative bg-[#f1f5f9] rounded-4xl p-8 md:p-12 overflow-hidden flex flex-col gap-6 border border-border-light/50"
+						className="relative bg-[#f1f5f9] dark:bg-[#00212e] rounded-4xl p-8 md:p-12 overflow-hidden flex flex-col gap-6 border border-border-light/50"
 						style={{
 							maskImage:
 								"linear-gradient(to right, transparent, black 10%, black 90%, transparent)",

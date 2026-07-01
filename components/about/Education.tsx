@@ -20,7 +20,7 @@ const EDUCATION_DATA = {
 
 export function EducationSection() {
 	return (
-		<section className="py-20 bg-white/70 overflow-hidden">
+		<section className="py-20 bg-white/70 dark:bg-[#052e3e]/70 overflow-hidden">
 			<Container>
 				<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 					{/* LEFT SIDE: Text Content */}

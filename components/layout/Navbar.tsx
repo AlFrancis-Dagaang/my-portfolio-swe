@@ -3,11 +3,13 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { useTheme } from "@/lib/theme";
 import { Container } from "./Container";
 
 export function Navbar() {
 	const [isOpen, setIsOpen] = useState(false);
 	const pathname = usePathname();
+	const { theme, toggle } = useTheme();
 
 	const navLinks = [
 		{ name: "Home", href: "/" },
@@ -17,17 +19,17 @@ export function Navbar() {
 	];
 
 	return (
-		<nav className="sticky top-0 z-50 w-full border-b border-border-light bg-white/80 backdrop-blur-md">
+		<nav className="sticky top-0 z-50 w-full border-b border-border-light bg-white/80 dark:bg-[#00212e]/80 backdrop-blur-md">
 			<Container>
 				<div className="flex h-16 items-center justify-between">
-					{/* Updated Text Logo */}
+					{/* Text Logo */}
 					<Link href="/" aria-label="Home" className="flex items-center group">
-						<span className=" font-bold text-lg md:text-xl tracking-tight text-primary-text transition-colors">
+						<span className="font-bold text-lg md:text-xl tracking-tight text-primary-text transition-colors">
 							Al Francis <span className="text-brand">Daga-ang</span>
 						</span>
 					</Link>
 
-					{/* Desktop Navigation Link Menu */}
+					{/* Desktop Navigation */}
 					<div className="hidden md:flex items-center gap-8">
 						{navLinks.map((link) => {
 							const isActive = pathname === link.href;
@@ -45,46 +47,95 @@ export function Navbar() {
 								</Link>
 							);
 						})}
+
+						{/* Theme Toggle — Desktop */}
+						<button
+							type="button"
+							onClick={toggle}
+							aria-label="Toggle dark mode"
+							className="flex items-center gap-3 focus:outline-none group"
+						>
+							{/* Pill Switch */}
+							<div
+								className={`w-12 h-6 rounded-full border-2 flex items-center px-1 transition-colors duration-300 ${
+									theme === "dark" ? "border-white" : "border-black"
+								}`}
+							>
+								<div
+									className={`w-3.5 h-3.5 rounded-full transition-transform duration-300 ${
+										theme === "dark"
+											? "bg-white translate-x-6"
+											: "bg-black translate-x-0"
+									}`}
+								/>
+							</div>
+						</button>
 					</div>
 
-					{/* Hamburger Mobile Menu Toggle Button */}
-					<button
-						type="button"
-						onClick={() => setIsOpen(!isOpen)}
-						className="flex h-9 w-9 items-center justify-center rounded-md md:hidden text-primary-text"
-						aria-label="Toggle Navigation Menu"
-						aria-expanded={isOpen}
-					>
-						<svg
-							className="h-6 w-6"
-							fill="none"
-							stroke="currentColor"
-							viewBox="0 0 24 24"
-							aria-hidden="true"
+					{/* Mobile: Theme Toggle + Hamburger */}
+					<div className="flex items-center gap-4 md:hidden">
+						{/* Theme Toggle — Mobile */}
+						<button
+							type="button"
+							onClick={toggle}
+							aria-label="Toggle dark mode"
+							className="flex items-center gap-3 focus:outline-none group"
 						>
-							{isOpen ? (
-								<path
-									strokeLinecap="round"
-									strokeLinejoin="round"
-									strokeWidth={2}
-									d="M6 18L18 6M6 6l12 12"
+							{/* Pill Switch */}
+							<div
+								className={`w-12 h-6 rounded-full border-2 flex items-center px-1 transition-colors duration-300 ${
+									theme === "dark" ? "border-white" : "border-black"
+								}`}
+							>
+								<div
+									className={`w-3.5 h-3.5 rounded-full transition-transform duration-300 ${
+										theme === "dark"
+											? "bg-white translate-x-6"
+											: "bg-black translate-x-0"
+									}`}
 								/>
-							) : (
-								<path
-									strokeLinecap="round"
-									strokeLinejoin="round"
-									strokeWidth={2}
-									d="M4 6h16M4 12h16M4 18h16"
-								/>
-							)}
-						</svg>
-					</button>
+							</div>
+						</button>
+
+						{/* Hamburger */}
+						<button
+							type="button"
+							onClick={() => setIsOpen(!isOpen)}
+							className="flex h-9 w-9 items-center justify-center rounded-md text-primary-text"
+							aria-label="Toggle Navigation Menu"
+							aria-expanded={isOpen}
+						>
+							<svg
+								className="h-6 w-6"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+								aria-hidden="true"
+							>
+								{isOpen ? (
+									<path
+										strokeLinecap="round"
+										strokeLinejoin="round"
+										strokeWidth={2}
+										d="M6 18L18 6M6 6l12 12"
+									/>
+								) : (
+									<path
+										strokeLinecap="round"
+										strokeLinejoin="round"
+										strokeWidth={2}
+										d="M4 6h16M4 12h16M4 18h16"
+									/>
+								)}
+							</svg>
+						</button>
+					</div>
 				</div>
 			</Container>
 
-			{/* Mobile Menu Panel Dropdown */}
+			{/* Mobile Menu Dropdown */}
 			{isOpen && (
-				<div className="border-b border-border-light bg-white md:hidden">
+				<div className="border-b border-border-light bg-white dark:bg-[#00212e] md:hidden">
 					<div className="space-y-1 px-4 py-3">
 						{navLinks.map((link) => {
 							const isActive = pathname === link.href;

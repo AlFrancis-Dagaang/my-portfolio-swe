@@ -8,7 +8,7 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project }: ProjectCardProps) {
 	return (
-		<div className="bg-white/70 border border-border-light p-6 flex flex-col justify-between h-full shadow-sm">
+		<div className="bg-white/70 dark:bg-[#052e3e]/70 border border-border-light p-6 flex flex-col justify-between h-full shadow-sm">
 			<div>
 				{project.imageUrl ? (
 					<Image
@@ -39,11 +39,11 @@ export function ProjectCard({ project }: ProjectCardProps) {
 				<div className="flex flex-wrap gap-1.5 mb-1">
 					{project.tags.map((tag, i) => (
 						<span key={tag} className="flex items-center gap-1.5">
-							<span className="text-xs font-sans font-medium uppercase text-gray-500 tracking-wider">
+							<span className="text-xs font-sans font-medium uppercase text-muted tracking-wider">
 								{tag}
 							</span>
 							{i < project.tags.length - 1 && (
-								<span className="text-gray-300 text-xs">·</span>
+								<span className="text-muted text-xs">·</span>
 							)}
 						</span>
 					))}
@@ -51,7 +51,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
 				<h3 className="text-xl font-bold uppercase text-primary-text mb-2 font-sans">
 					{project.title}
 				</h3>
-				<p className="text-sm font-normal text-gray-500 leading-relaxed mb-6 font-sans">
+				<p className="text-sm font-normal text-muted leading-relaxed mb-6 font-sans">
 					{project.description}
 				</p>
 			</div>

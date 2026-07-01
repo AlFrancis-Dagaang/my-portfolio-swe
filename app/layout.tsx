@@ -22,7 +22,26 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en" className={poppins.variable}>
+		<html lang="en" className={poppins.variable} suppressHydrationWarning>
+			<head>
+				<script
+					// biome-ignore lint/security/noDangerouslySetInnerHtml: blocking script needed to prevent dark mode flash before React hydration
+					dangerouslySetInnerHTML={{
+						__html: `
+							(function() {
+								try {
+									var saved = localStorage.getItem('theme');
+									var system = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+									var theme = saved !== null ? saved : system;
+									if (theme === 'dark') {
+										document.documentElement.classList.add('dark');
+									}
+								} catch (e) {}
+							})();
+						`,
+					}}
+				/>
+			</head>
 			<body className="min-h-screen flex flex-col antialiased">
 				<div className="dot-grid-bg" aria-hidden="true" />
 				<div className="relative z-10 flex flex-col min-h-screen">

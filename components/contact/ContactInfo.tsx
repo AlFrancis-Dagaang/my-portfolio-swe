@@ -44,16 +44,13 @@ const contactDetails = [
 
 export function ContactInfo() {
 	return (
-		<div className="bg-white/70 border border-[#e5e7eb] p-8 flex flex-col gap-8 h-full">
+		<div className="bg-white/70 dark:bg-[#052e3e]/70 p-8 flex flex-col gap-8 h-full">
 			{/* Heading */}
 			<div>
-				<p className="text-[10px] font-bold uppercase tracking-widest text-brand mb-2 font-sans">
-					Get in touch
-				</p>
 				<h2 className="text-2xl font-black uppercase tracking-tighter text-primary-text font-sans">
 					Contact Info
 				</h2>
-				<p className="mt-2 text-sm text-gray-500 font-sans leading-relaxed">
+				<p className="mt-2 text-sm text-muted font-sans leading-relaxed">
 					Feel free to reach out through any of the channels below.
 				</p>
 			</div>
@@ -67,7 +64,7 @@ export function ContactInfo() {
 					const Icon = detail.icon;
 					return (
 						<div key={detail.label} className="flex items-center gap-4">
-							<div className="flex h-10 w-10 items-center justify-center border border-[#e5e7eb] bg-surface shrink-0">
+							<div className="flex h-10 w-10 items-center justify-center border border-border-light dark:bg-[#0a3a4a] shrink-0">
 								<Icon className="h-4 w-4 text-brand" aria-hidden="true" />
 							</div>
 							<div className="flex flex-col min-w-0">
@@ -101,7 +98,7 @@ export function ContactInfo() {
 
 			{/* Socials */}
 			<div>
-				<p className="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-4 font-sans">
+				<p className="text-[10px] font-bold uppercase tracking-widest text-muted mb-4 font-sans">
 					Find me on
 				</p>
 				<div className="flex items-center gap-2">
@@ -114,7 +111,7 @@ export function ContactInfo() {
 								target="_blank"
 								rel="noopener noreferrer"
 								aria-label={social.label}
-								className="flex h-10 w-10 items-center justify-center border border-[#e5e7eb] bg-surface hover:border-brand hover:text-brand hover:bg-white transition-colors text-primary-text"
+								className="flex h-10 w-10 items-center justify-center border border-border-light dark:bg-[#0a3a4a]  hover:text-brand hover:dark:bg-[#0a3a4a] transition-colors text-primary-text"
 							>
 								<Icon className="h-4 w-4" aria-hidden="true" />
 							</a>
