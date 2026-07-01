@@ -92,9 +92,8 @@ export function TechStackSection({ skills }: TechStackProps) {
 						</h2>
 
 						<p className="text-lg text-muted leading-relaxed max-w-md">
-							I work with leading platforms and technologies that empower
-							digital transformation, accelerate delivery, and drive measurable
-							business results.
+							I work with these tools day to day — building projects, solving
+							problems, and picking up new ones along the way.
 						</p>
 					</div>
 
